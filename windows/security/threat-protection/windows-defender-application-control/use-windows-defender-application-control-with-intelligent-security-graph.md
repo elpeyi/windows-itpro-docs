@@ -1,53 +1,65 @@
 ---
-title: Deploy Windows Defender Application Control with Intelligent Security Graph (ISG) (Windows 10)
+title: Authorize reputable apps with the Intelligent Security Graph (ISG) (Windows)
 description: Automatically authorize applications that Microsoft’s ISG recognizes as having known good reputation.
-ms.prod: w10
+keywords: security, malware
+ms.assetid: 8d6e0474-c475-411b-b095-1c61adb2bdbb
+ms.prod: windows-client
 ms.mktglfcycl: deploy
+ms.sitesec: library
+ms.pagetype: security
 ms.localizationpriority: medium
-author: dansimp
-ms.date: 06/14/2018
-ms.reviewer: 
-manager: dansimp
-ms.author: dansimp
+audience: ITPro
+author: jsuther1974
+ms.reviewer: isbrahm
+ms.author: vinpa
+manager: aaroncz
+ms.technology: itpro-security
+ms.date: 12/31/2017
+ms.topic: article
 ---
 
-# Use Windows Defender Application Control (WDAC) with the Microsoft Intelligent Security Graph 
+# Authorize reputable apps with the Intelligent Security Graph (ISG)
 
 **Applies to:**
 
--   Windows 10
--   Windows Server 2016
+- Windows 10
+- Windows 11
+- Windows Server 2019 and above
 
-Application execution control can be difficult to implement in enterprises that do not have processes to effectively control the deployment of applications centrally through an IT managed system. 
-In such environments, users are empowered to acquire the applications they need for work, making accounting for all the applications that would need to be authorized for execution control a daunting task.  
+> [!NOTE]
+> Some capabilities of Windows Defender Application Control are only available on specific Windows versions. Learn more about the [Windows Defender Application Control feature availability](feature-availability.md).
 
-Windows 10, version 1709 (also known as the Windows 10 Fall Creators Update) provides a new option, known as Intelligent Security Graph (ISG) authorization, that allows IT administrators to automatically authorize applications that Microsoft’s ISG recognizes as having known good reputation. The ISG option helps IT organizations take a significant first step towards going from having no application control at all to a simple means of preventing the execution of unknown and known bad software.
+Application control can be difficult to implement in organizations that don't deploy and manage applications through an IT-managed system. In such environments, users can acquire the applications they want to use for work, making it hard to build an effective application control policy.
 
-## How does the integration between WDAC and the Intelligent Security Graph work? 
+To reduce end-user friction and helpdesk calls, you can set Windows Defender Application Control (WDAC) to automatically allow applications that Microsoft's Intelligent Security Graph (ISG) recognizes as having known good reputation. The ISG option helps organizations begin to implement application control even when the organization has limited control over their app ecosystem. To learn more about the ISG, see the Security section in [Major services and features in Microsoft Graph](/graph/overview-major-services).
 
-The ISG relies on Microsoft’s vast security intelligence and machine learning analytics to help classify applications as having known good reputation. When users download applications on a system with WDAC enabled with the ISG authorization option specified, the reputation of the downloaded file, commonly an installer, is used to determine whether to run the installer and then that original reputation information is passed along to any files that were written by the installer. When any of these files try to execute after they are installed, the reputation data is used to help make the right policy authorization decision.   
+> [!WARNING]
+> Binaries that are critical to boot the system must be allowed using explicit rules in your WDAC policy. Do not rely on the ISG to authorize these files.
+>
+> The ISG option is not the recommended way to allow apps that are business critical. You should always authorize business critical apps using explicit allow rules or by installing them with a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer).
 
-After that initial download and installation, the WDAC component will check for the presence of the positive reputation information when evaluating other application execution control rules specified in the policy. If there are no deny rules present for the file, it will be authorized based on the known good reputation classification.  
+## How does WDAC work with the ISG?
 
-The reputation data on the client is rechecked periodically and enterprises can also specify that any cached reputation results are flushed on reboot.    
+The ISG isn't a "list" of apps. Rather, it uses the same vast security intelligence and machine learning analytics that power Microsoft Defender SmartScreen and Microsoft Defender Antivirus to help classify applications as having "known good", "known bad", or "unknown" reputation. This cloud-based AI is based on trillions of signals collected from Windows endpoints and other data sources, and processed every 24 hours. As a result, the decision from the cloud can change.
 
->[!NOTE]
->Admins needs to ensure that there is a WDAC policy in place to allow the system to boot and run any other authorized applications that may not be classified as being known good by the Intelligent Security Graph, for example custom line-of-business (LOB) apps. Since the Intelligent Security Graph is powered by global prevalence data, internal LOB apps may not be recognized as being known good. Other mechanisms like managed installer and explicit rules will help cover internal applications. Both System Center Configuration Manager (SCCM) and Microsoft Intune can be used to create and push a WDAC policy to your client machines.  
+WDAC only checks the ISG for binaries that aren't explicitly allowed or denied by your policy, and that weren't installed by a managed installer. When such a binary runs on a system with WDAC enabled with the ISG option, WDAC will check the file's reputation by sending its hash and signing information to the cloud. If the ISG reports that the file has a "known good" reputation, then the file will be allowed to run. Otherwise, it will be blocked by WDAC.
 
-Other examples of WDAC policies are available in C:\Windows\schemas\CodeIntegrity\ExamplePolicies and can help authorize Windows OS components, WHQL signed drivers and all Store apps. Admins can reference and customize them as needed for their Windows Defender Application Control deployment or [create a custom WDAC policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/create-initial-default-policy). 
+If the file with good reputation is an application installer, the installer's reputation will pass along to any files that it writes to disk. This way, all the files needed to install and run an app inherit the positive reputation data from the installer. Files authorized based on the installer's reputation will have the $KERNEL.SMARTLOCKER.ORIGINCLAIM kernel Extended Attribute (EA) written to the file.
 
-## Configuring Intelligent Security Graph authorization for Windows Defender Application Control 
+WDAC periodically requeries the reputation data on a file. Additionally, enterprises can specify that any cached reputation results are flushed on reboot by using the **Enabled:Invalidate EAs on Reboot** option.
 
-Setting up the ISG authorization is easy regardless of what management solution you use. Configuring the ISG option involves these basic steps: 
+## Configuring ISG authorization for your WDAC policy
 
-- [Ensure that the ISG option is enabled in the WDAC policy XML](#ensure-that-the-intelligent-security-graph-option-is-enabled-in-the-wdac-policy-xml) 
-- [Enable the necessary services to allow WDAC to use the ISG correctly on the client](#enable-the-necessary-services-to-allow-wdac-to-use-the-isg-correctly-on-the-client) 
+Setting up the ISG is easy using any management solution you wish. Configuring the ISG option involves these basic steps:
 
-### Ensure that the Intelligent Security Graph option is enabled in the WDAC policy XML 
+- [Ensure that the **Enabled:Intelligent Security Graph authorization** option is set in the WDAC policy XML](#ensure-that-the-isg-option-is-set-in-the-wdac-policy-xml)
+- [Enable the necessary services to allow WDAC to use the ISG correctly on the client](#enable-the-necessary-services-to-allow-wdac-to-use-the-isg-correctly-on-the-client)
 
-In order to enable trust for executables based on classifications in the ISG, the **Enabled:Intelligent Security Graph authorization** option must be specified in the WDAC policy. This can be done with the Set-RuleOption cmdlet. In addition, it is recommended from a security perspective to also enable the **Enabled:Invalidate EAs on Reboot** option to invalidate the cached ISG results on reboot to force rechecking of applications against the ISG. Caution is advised if devices will regularly transition to and from environments that may not be able to access the ISG. The following example shows both options being set. 
+### Ensure that the ISG option is set in the WDAC policy XML
 
-```code
+To allow apps and binaries based on the Microsoft Intelligent Security Graph, the **Enabled:Intelligent Security Graph authorization** option must be specified in the WDAC policy. This step can be done with the Set-RuleOption cmdlet. You should also set the **Enabled:Invalidate EAs on Reboot** option so that ISG results are verified again after each reboot. The ISG option isn't recommended for devices that don't have regular access to the internet. The following example shows both options set.
+
+```xml
 <Rules> 
     <Rule> 
       <Option>Enabled:Unsigned System Integrity Policy</Option> 
@@ -75,29 +87,29 @@ In order to enable trust for executables based on classifications in the ISG, th
 
 ### Enable the necessary services to allow WDAC to use the ISG correctly on the client
 
-In order for the heuristics used by the ISG to function properly, a number of component in Windows need to be enabled. The easiest way to do this is to run the appidtel executable in c:\windows\system32.
+In order for the heuristics used by the ISG to function properly, other components in Windows must be enabled. You can configure these components by running the appidtel executable in `c:\windows\system32`.
 
-```
+```console
 appidtel start
 ```
 
-For WDAC policies deployed over MDM using the AppLocker CSP this step is not required as the CSP will enable the necessary components. ISG enabled through the SCCM WDAC UX will not need this step but if custom policies are being deployed outside of the WDAC UX through SCCM then this step is required.   
+This step isn't required for WDAC policies deployed over MDM, as the CSP will enable the necessary components. This step is also not required when the ISG is configured using Configuration Manager's WDAC integration.
 
-## Security considerations with using the Intelligent Security Graph 
+## Security considerations with the ISG option
 
-Since the ISG is a heuristic-based mechanism, it does not provide the same security guarantees that explicit allow or deny rules do. It is best suited for deployment to systems where each user is configured as a standard user and there are other monitoring systems in place like Windows Defender Advanced Threat Protection to help provide optics into what users are doing. 
+Since the ISG is a heuristic-based mechanism, it doesn't provide the same security guarantees as explicit allow or deny rules. It's best suited where users operate with standard user rights and where a security monitoring solution like Microsoft Defender for Endpoint is used.
 
-Users with administrator privileges or malware running as an administrator user on the system may be able to circumvent the intent of WDAC when the ISG option is allowed by circumventing or corrupting the heuristics used to assign reputation to application executables. The ISG option uses the same heuristic tracking as managed installer and so for application installers that include an option to automatically run the application at the end of the installation process the heuristic may over-authorize.  
+Processes running with kernel privileges can circumvent WDAC by setting the ISG extended file attribute to make a binary appear to have known good reputation.
 
-## Known limitations with using the Intelligent Security Graph
+Also, since the ISG option passes along reputation from app installers to the binaries they write to disk, it can over-authorize files in some cases. For example, if the installer launches the app upon completion, any files the app writes during that first run will also be allowed.
 
-Since the ISG relies on identifying executables as being known good, there are cases where it may classify legitimate executables as unknown, leading to blocks that need to be resolved either with a rule in the WDAC policy, a catalog signed by a certificate trusted in the WDAC policy or by deployment through a WDAC managed installer. Typically, this is due to an installer or application using a dynamic file as part of execution. These files do not tend to build up known good reputation. Auto-updating applications have also been observed using this mechanism and may be flagged by the ISG.  
+## Known limitations with using the ISG
 
-Modern apps are not supported with the ISG heuristic and will need to be separately authorized in your WDAC policy. As modern apps are signed by the Microsoft Store and Microsoft Store for Business. it is straightforward to authorize modern apps with signer rules in the WDAC policy.
+Since the ISG only allows binaries that are "known good", there are cases where the ISG may be unable to predict whether legitimate software is safe to run. If that happens, the software will be blocked by WDAC. In this case, you need to allow the software with a rule in your WDAC policy, deploy a catalog signed by a certificate trusted in the WDAC policy, or install the software from a WDAC managed installer. Installers or applications that dynamically create binaries at runtime, and self-updating applications, may exhibit this symptom.
 
-The ISG heuristic does not authorize kernel mode drivers. The WDAC policy must have rules that allow the necessary drivers to run.  
+Packaged apps aren't supported with the ISG and will need to be separately authorized in your WDAC policy. Since packaged apps have a strong app identity and must be signed, it's straightforward to [authorize packaged apps](/windows/security/threat-protection/windows-defender-application-control/manage-packaged-apps-with-windows-defender-application-control) with your WDAC policy.
 
-In some cases, the code integrity logs where WDAC errors and warnings are written will contain error events for native images generated for .NET assemblies. Typically, the error is functionally benign as a blocked native image will result in the corresponding assembly being re-interpreted. Review for functionality and performance for the related applications using the native images maybe necessary in some cases. 
+The ISG doesn't authorize kernel mode drivers. The WDAC policy must have rules that allow the necessary drivers to run.  
 
->[!NOTE]
-> A rule that explicitly allows an application will take precedence over the ISG rule that does not allow it. In this scenario, this policy is not compatible with Intune, where there is no option to add rules to the template that enables ISG. In most circumstances you would need to build a custom WDAC policy, including ISG if desired.
+> [!NOTE]
+> A rule that explicitly denies or allows a file will take precedence over that file's reputation data. Microsoft Intune's built-in WDAC support includes the option to trust apps with good reputation via the ISG, but it has no option to add explicit allow or deny rules. In most cases, customers using application control will need to deploy a custom WDAC policy (which can include the ISG option if desired) using [Intune's OMA-URI functionality](deployment/deploy-windows-defender-application-control-policies-using-intune.md#deploy-wdac-policies-with-custom-oma-uri).

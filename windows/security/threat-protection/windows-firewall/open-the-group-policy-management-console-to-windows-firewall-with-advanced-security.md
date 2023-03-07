@@ -1,27 +1,19 @@
 ---
-title: Open the Group Policy Management Console to Windows Firewall with Advanced Security (Windows 10)
-description: Open the Group Policy Management Console to Windows Firewall with Advanced Security
-ms.assetid: 28afab36-8768-4938-9ff2-9d6dab702e98
-ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-ms.localizationpriority: medium
-author: dansimp
-manager: dansimp
-audience: ITPro
-ms.collection: M365-security-compliance
+title: Group Policy Management of Windows Firewall with Advanced Security (Windows)
+description: Group Policy Management of Windows Firewall with Advanced Security
+ms.prod: windows-client
+ms.collection: 
+  - highpri
+  - tier3
 ms.topic: conceptual
-ms.date: 04/19/2017
+ms.date: 09/08/2021
+appliesto: 
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10 and later</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016 and later</a>
 ---
 
-# Open the Group Policy Management Console to Windows Firewall with Advanced Security
+# Group Policy Management of Windows Firewall with Advanced Security
 
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
 Most of the procedures in this guide instruct you to use Group Policy settings for Windows Firewall with Advanced Security.
 

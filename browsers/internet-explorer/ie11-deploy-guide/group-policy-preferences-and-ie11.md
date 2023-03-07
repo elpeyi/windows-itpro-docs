@@ -3,12 +3,13 @@ ms.localizationpriority: medium
 ms.mktglfcycl: deploy
 ms.pagetype: security
 description: Info about Group Policy preferences versus Group Policy settings
-author: lomayor
+author: dansimp
 ms.prod: ie11
 ms.assetid: f2264c97-7f09-4f28-bb5c-58ab80dcc6ee
 ms.reviewer: 
-audience: itpromanager: dansimp
-ms.author: lomayor
+audience: itpro
+manager: dansimp
+ms.author: dansimp
 title: Group policy preferences and Internet Explorer 11 (Internet Explorer 11 for IT Pros)
 ms.sitesec: library
 ms.date: 07/27/2017
@@ -16,9 +17,12 @@ ms.date: 07/27/2017
 
 
 # Group policy preferences and Internet Explorer 11
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+
 Group Policy preferences are less strict than Group Policy settings, based on:
 
-|    |Group Policy preferences |Group Policy settings |
+| Type   |Group Policy preferences |Group Policy settings |
 |-----|-------------------------|----------------------|
 |Enforcement |<ul><li>Not enforced</li><li>Has the user interface turned on</li><li>Can only be refreshed or applied once</li></ul> |<ul><li>Enforced</li><li>Has the user interface turned off</li><li>Can be refreshed multiple times</li></ul> |
 |Flexibility |Lets you create preference items for registry settings, files, and folders. |<ul><li>Requires app support</li><li>Needs you to create Administrative Templates for new policy settings</li><li>Won't let you create policy settings to manage files and folders</li></ul> |

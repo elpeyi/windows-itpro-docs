@@ -21,7 +21,8 @@
         "files": [
           "**/*.png",
           "**/*.jpg",
-          "**/*.gif"
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -32,22 +33,65 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/windows/windows-10/breadcrumb/toc.json",
-      "ms.technology": "windows",
-      "ms.topic": "article",
-      "manager": "dansimp",
-      "audience": "ITPro",
+      "recommendations": true,
+      "ms.collection": [
+        "tier2"
+      ],
+      "breadcrumb_path": "/windows/resources/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "ms.localizationpriority": "medium",
+      "ms.prod": "windows-client",
+      "ms.technology": "itpro-security",
+      "manager": "aaroncz",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/windows-itpro-docs",
-      "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
+      "feedback_product_url": "https://support.microsoft.com/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332",
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "MSDN.security",
           "folder_relative_path_in_docset": "./"
         }
+      },
+      "contributors_to_exclude": [
+        "rjagiewich", 
+        "traya1", 
+        "rmca14", 
+        "claydetels19", 
+        "jborsecnik",
+        "tiburd",
+        "AngelaMotherofDragons",
+        "dstrome",
+        "v-dihans",
+        "garycentric"
+      ],
+      "searchScope": ["Windows 10"]
+    },
+    "fileMetadata": {
+      "author":{
+        "identity-protection/**/*.md": "paolomatarazzo",
+        "threat-protection/windows-firewall/**/*.md": "aczechowski"
+      },
+      "ms.author":{
+        "identity-protection/**/*.md": "paoloma",
+        "threat-protection/windows-firewall/*.md": "aaroncz"
+      },
+      "ms.reviewer":{
+        "identity-protection/hello-for-business/*.md": "erikdau",
+        "identity-protection/credential-guard/*.md": "zwhittington",
+        "identity-protection/access-control/*.md": "sulahiri",
+        "threat-protection/windows-firewall/*.md": "paoloma"
+      },
+      "ms.collection":{
+        "identity-protection/hello-for-business/*.md": "tier1",
+        "information-protection/bitlocker/*.md": "tier1",
+        "information-protection/personal-data-encryption/*.md": "tier1",
+        "information-protection/pluton/*.md": "tier1",
+        "information-protection/tpm/*.md": "tier1",
+        "threat-protection/auditing/*.md": "tier3",
+        "threat-protection/windows-defender-application-control/*.md": "tier3",
+        "threat-protection/windows-firewall/*.md": "tier3"
       }
     },
-    "fileMetadata": {},
     "template": [],
     "dest": "security",
     "markdownEngineName": "markdig"

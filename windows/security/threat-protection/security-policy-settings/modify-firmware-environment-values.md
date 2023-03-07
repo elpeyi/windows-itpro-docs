@@ -3,23 +3,24 @@ title: Modify firmware environment values (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Modify firmware environment values security policy setting.
 ms.assetid: 80bad5c4-d9eb-4e3a-a5dc-dcb742b83fca
 ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
+ms.author: vinpa
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: dansimp
-manager: dansimp
+author: vinaypamnani-msft
+manager: aaroncz
 audience: ITPro
-ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: itpro-security
 ---
 
 # Modify firmware environment values
 
 **Applies to**
+-   Windows 11
 -   Windows 10
 
 Describes the best practices, location, values, policy management, and security considerations for the **Modify firmware environment values** security policy setting.
@@ -102,7 +103,7 @@ Ensure that only the local Administrators group is assigned the **Modify firmwar
 
 ### Potential impact
 
-None. Restricting the **Modify firmware environment values** user right to the members of the local Administrators group is the default configuration.
+Removing the local Administrators group from the **Modify firmware environment values** user right could cause inoperability of the BitLocker Drive Encryption feature.
 
 ## Related topics
 

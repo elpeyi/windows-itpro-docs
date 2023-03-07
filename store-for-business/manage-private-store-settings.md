@@ -4,14 +4,13 @@ description: The private store is a feature in the Microsoft Store for Business 
 ms.assetid: 2D501538-0C6E-4408-948A-2BF5B05F7A0C
 ms.reviewer: 
 manager: dansimp
-ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: store
 author: TrudyHa
 ms.author: TrudyHa
 ms.topic: conceptual
-ms.date: 3/29/2018
+ms.date: 07/21/2021
 ms.localizationpriority: medium
 ---
 
@@ -20,7 +19,9 @@ ms.localizationpriority: medium
 **Applies to**
 
 -   Windows 10
--   Windows 10 Mobile
+
+> [!IMPORTANT]
+> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
 The private store is a feature in Microsoft Store for Business and Education that organizations receive during the sign up process. When admins add apps to the private store, all people in the organization can view and download the apps. Only online-licensed apps can be distributed from your private store.
 
@@ -48,10 +49,11 @@ You can create collections of apps within your private store. Collections allow 
 You can add a collection to your private store from the private store, or from the details page for an app.
 
 **From private store**
+
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com) or [Microsoft Store for Education](https://educationstore.microsoft.com).
 2. Click your private store.</br>
 
-    ![Image showing private store name on MSfB store UI.](images/msfb-click-private-store.png)
+    ![Image showing private store name on Microsoft Store for Business store UI.](images/msfb-click-private-store.png)
 3. Click **Add a Collection**.</br>
 
     ![Image showing Add a Collection.](images/msfb-add-collection.png)
@@ -63,6 +65,7 @@ You can add a collection to your private store from the private store, or from t
 > New collections require at least one app, or they will not be created.
 
 **From app details page**
+
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com) or [Microsoft Store for Education](https://educationstore.microsoft.com).
 2. Click **Manage**, and then click **Products & services**.
 3. Under **Apps & software**, choose an app you want to include in a new collection.
@@ -82,12 +85,13 @@ If you've already added a Collection to your private store, you can easily add a
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com) or [Microsoft Store for Education](https://educationstore.microsoft.com).
 2. Click your private store.</br>
 
-    ![Image showing private store name on MSfB store UI.](images/msfb-click-private-store.png)
+    ![Image showing private store name on Microsoft Store for Business store UI.](images/msfb-click-private-store.png)
 
 3. Click the ellipses next to the collection name, and click **Edit collection**.
 4. Add or remove products from the collection, and then click **Done**.
 
 You can also add an app to a collection from the app details page.
+
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com) or [Microsoft Store for Education](https://educationstore.microsoft.com).
 2. Click **Manage**, and then click **Products & services**.
 3. Under **Apps & software**, choose an app you want to include in a new collection.
@@ -102,7 +106,7 @@ We've recently made performance improvements for changes in the private store. T
 | ------------------------------------------------------ | -------------- |
 | Add a product to the private store <br> - Apps recently added to your inventory, including line-of-business (LOB) apps and new purchases, will take up to 36 hours to add to the private store. That time begins when the product is purchased, or added to your inventory. <br> - It will take an additional 36 hours for the product to be searchable in private store, even if you see the app available from the private store tab. | - 15 minutes: available on private store tab <br> - 36 hours: searchable in private store <br> - 36 hours: searchable in private store tab |
 | Remove a product from private store |  - 15 minutes: private store tab <br> - 36 hours: searchable in private store |
-| Accept a new LOB app into your inventory (under **Products & services)**) | - 15 minutes: available on private store tab <br> - 36 hours: searchable in private store |
+| Accept a new LOB app into your inventory (under **Products & services**) | - 15 minutes: available on private store tab <br> - 36 hours: searchable in private store |
 | Create a new collection | 15 minutes|
 | Edit or remove a collection | 15 minutes |
 | Create private store tab | 4-6 hours |

@@ -1,145 +1,122 @@
 ---
-title: Policy CSP - DataProtection
-description: Policy CSP - DataProtection
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 01/26/2019
-ms.reviewer: 
-manager: dansimp
+title: DataProtection Policy CSP
+description: Learn more about the DataProtection Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- DataProtection-Begin -->
 # Policy CSP - DataProtection
 
+<!-- DataProtection-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DataProtection-Editable-End -->
 
+<!-- AllowDirectMemoryAccess-Begin -->
+## AllowDirectMemoryAccess
 
-<hr/>
+<!-- AllowDirectMemoryAccess-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1507 [10.0.10240] and later |
+<!-- AllowDirectMemoryAccess-Applicability-End -->
 
-<!--Policies-->
-## DataProtection policies  
+<!-- AllowDirectMemoryAccess-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/DataProtection/AllowDirectMemoryAccess
+```
+<!-- AllowDirectMemoryAccess-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#dataprotection-allowdirectmemoryaccess">DataProtection/AllowDirectMemoryAccess</a>
-  </dd>
-  <dd>
-    <a href="#dataprotection-legacyselectivewipeid">DataProtection/LegacySelectiveWipeID</a>
-  </dd>
-</dl>
+<!-- AllowDirectMemoryAccess-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting allows you to block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. Once a user logs in, Windows will enumerate the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA will be blocked on hot plug PCI ports with no children devices until the user logs in again. Devices which were already enumerated when the machine was unlocked will continue to function until unplugged. This policy setting is only enforced when [BitLocker Device Encryption](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) is enabled. Most restricted value is 0.
+<!-- AllowDirectMemoryAccess-Description-End -->
 
+<!-- AllowDirectMemoryAccess-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowDirectMemoryAccess-Editable-End -->
 
-<hr/>
+<!-- AllowDirectMemoryAccess-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="dataprotection-allowdirectmemoryaccess"></a>**DataProtection/AllowDirectMemoryAccess**  
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowDirectMemoryAccess-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- AllowDirectMemoryAccess-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Value | Description |
+|:--|:--|
+| 0 | Not allowed. |
+| 1 (Default) | Allowed. |
+<!-- AllowDirectMemoryAccess-AllowedValues-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- AllowDirectMemoryAccess-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowDirectMemoryAccess-Examples-End -->
 
-<hr/>
+<!-- AllowDirectMemoryAccess-End -->
 
-<!--/Scope-->
-<!--Description-->
-This policy setting allows you to block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. Once a user logs in, Windows will enumerate the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA will be blocked on hot plug PCI ports with no children devices until the user logs in again. Devices which were already enumerated when the machine was unlocked will continue to function until unplugged. This policy setting is only enforced when [BitLocker Device Encryption](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) is enabled.
+<!-- LegacySelectiveWipeID-Begin -->
+## LegacySelectiveWipeID
 
-Most restricted value is 0.
+<!-- LegacySelectiveWipeID-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- LegacySelectiveWipeID-Applicability-End -->
 
-<!--/Description-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- LegacySelectiveWipeID-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/DataProtection/LegacySelectiveWipeID
+```
+<!-- LegacySelectiveWipeID-OmaUri-End -->
 
--   0 – Not allowed.
--   1 (default) – Allowed.
-
-<!--/SupportedValues-->
-<!--/Policy-->
-
-<hr/>
-
-<!--Policy-->
-<a href="" id="dataprotection-legacyselectivewipeid"></a>**DataProtection/LegacySelectiveWipeID**  
-
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
-
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
-
-> [!div class = "checklist"]
-> * Device
-
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
-> [!IMPORTANT]
-> This policy may change in a future release. It may be used for testing purposes, but should not be used in a production environment at this time.
-
- 
-Setting used by Windows 8.1 Selective Wipe.
+<!-- LegacySelectiveWipeID-Description-Begin -->
+<!-- Description-Source-DDF -->
+Important. This policy may change in a future release. It may be used for testing purposes, but should not be used in a production environment at this time. Setting used by Windows 8. 1 Selective Wipe
 
 > [!NOTE]
-> This policy is not recommended for use in Windows 10.
+> This policy is not recommended for use in Windows 10.
+<!-- LegacySelectiveWipeID-Description-End -->
 
-<!--/Description-->
-<!--/Policy-->
-<hr/>
+<!-- LegacySelectiveWipeID-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- LegacySelectiveWipeID-Editable-End -->
 
-Footnotes:
+<!-- LegacySelectiveWipeID-DFProperties-Begin -->
+**Description framework properties**:
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- LegacySelectiveWipeID-DFProperties-End -->
 
-<!--/Policies-->
+<!-- LegacySelectiveWipeID-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- LegacySelectiveWipeID-Examples-End -->
+
+<!-- LegacySelectiveWipeID-End -->
+
+<!-- DataProtection-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- DataProtection-CspMoreInfo-End -->
+
+<!-- DataProtection-End -->
+
+## Related articles
+
+[Policy configuration service provider](policy-configuration-service-provider.md)

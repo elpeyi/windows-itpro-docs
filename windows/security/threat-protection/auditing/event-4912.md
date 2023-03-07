@@ -1,23 +1,21 @@
 ---
 title: 4912(S) Per User Audit Policy was changed. (Windows 10)
-description: Describes security event 4912(S) Per User Audit Policy was changed.
+description: Describes security event 4912(S) Per User Audit Policy was changed. This event is generated every time Per User Audit Policy is changed.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: dansimp
-ms.date: 04/19/2017
+author: vinaypamnani-msft
+ms.date: 09/08/2021
 ms.reviewer: 
-manager: dansimp
-ms.author: dansimp
+manager: aaroncz
+ms.author: vinpa
+ms.technology: itpro-security
+ms.topic: reference
 ---
 
 # 4912(S): Per User Audit Policy was changed.
-
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
 
 <img src="images/event-4912.png" alt="Event 4912 illustration" width="471" height="478" hspace="10" align="left" />
@@ -92,7 +90,7 @@ This event is always logged regardless of the "Audit Policy Change" sub-category
 
     -   Uppercase full domain name: CONTOSO.LOCAL
 
-    -   For some [well-known security principals](https://support.microsoft.com/kb/243330), such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.
+    -   For some [well-known security principals](/windows/security/identity-protection/access-control/security-identifiers), such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.
 
     -   For local user accounts, this field will contain the name of the computer or device that this account belongs to, for example: “Win81”.
 
@@ -126,8 +124,9 @@ This event is always logged regardless of the "Audit Policy Change" sub-category
 
 -   **Subcategory** \[Type = UnicodeString\]**:** the name of auditing subcategory which state was changed. Possible values:
 
-| Audit Credential Validation              | Audit Process Termination                    | Audit Other Logon/Logoff Events      |
+| Value              | Value                    | Value      |
 |------------------------------------------|----------------------------------------------|--------------------------------------|
+| Audit Credential Validation              | Audit Process Termination                    | Audit Other Logon/Logoff Events      |
 | Audit Kerberos Authentication Service    | Audit RPC Events                             | Audit Special Logon                  |
 | Audit Kerberos Service Ticket Operations | Audit Detailed Directory Service Replication | Audit Application Generated          |
 | Audit Other Logon/Logoff Events          | Audit Directory Service Access               | Audit Certification Services         |
@@ -145,7 +144,7 @@ This event is always logged regardless of the "Audit Policy Change" sub-category
 | Audit Policy Change                      | Audit Non-Sensitive Privilege Use            | Audit System Integrity               |
 | Audit Authentication Policy Change       | Audit Sensitive Privilege Use                | Audit PNP Activity                   |
 | Audit Authorization Policy Change        | Audit Other Privilege Use Events             |                                      |
-| Group Membership                         | Audit Network Policy Server                  |                                      |
+| Audit Group Membership                         | Audit Network Policy Server                  |                                      |
 
 -   **Subcategory GUID** \[Type = GUID\]**:** the unique GUID of changed subcategory.
 

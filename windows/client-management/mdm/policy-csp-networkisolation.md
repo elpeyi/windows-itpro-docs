@@ -1,490 +1,501 @@
 ---
-title: Policy CSP - NetworkIsolation
-description: Policy CSP - NetworkIsolation
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 05/14/2018
-ms.reviewer: 
-manager: dansimp
+title: NetworkIsolation Policy CSP
+description: Learn more about the NetworkIsolation Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- NetworkIsolation-Begin -->
 # Policy CSP - NetworkIsolation
 
+<!-- NetworkIsolation-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- NetworkIsolation-Editable-End -->
 
+<!-- EnterpriseCloudResources-Begin -->
+## EnterpriseCloudResources
 
-<hr/>
+<!-- EnterpriseCloudResources-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- EnterpriseCloudResources-Applicability-End -->
 
-<!--Policies-->
-## NetworkIsolation policies  
+<!-- EnterpriseCloudResources-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseCloudResources
+```
+<!-- EnterpriseCloudResources-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#networkisolation-enterprisecloudresources">NetworkIsolation/EnterpriseCloudResources</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterpriseiprange">NetworkIsolation/EnterpriseIPRange</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterpriseiprangesareauthoritative">NetworkIsolation/EnterpriseIPRangesAreAuthoritative</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterpriseinternalproxyservers">NetworkIsolation/EnterpriseInternalProxyServers</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterprisenetworkdomainnames">NetworkIsolation/EnterpriseNetworkDomainNames</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterpriseproxyservers">NetworkIsolation/EnterpriseProxyServers</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-enterpriseproxyserversareauthoritative">NetworkIsolation/EnterpriseProxyServersAreAuthoritative</a>
-  </dd>
-  <dd>
-    <a href="#networkisolation-neutralresources">NetworkIsolation/NeutralResources</a>
-  </dd>
-</dl>
+<!-- EnterpriseCloudResources-Description-Begin -->
+<!-- Description-Source-DDF -->
+Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy. This domain list is a pipe-separated list of cloud resources. Each cloud resource can also be paired optionally with an internal proxy server by using a trailing comma followed by the proxy address. For example, `<cloudresource>`|`<cloudresource>`|`<cloudresource>`,`<proxy>`|`<cloudresource>`|`<cloudresource>`,`<proxy>`|.
+<!-- EnterpriseCloudResources-Description-End -->
 
+<!-- EnterpriseCloudResources-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseCloudResources-Editable-End -->
 
-<hr/>
+<!-- EnterpriseCloudResources-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="networkisolation-enterprisecloudresources"></a>**NetworkIsolation/EnterpriseCloudResources**  
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `|`) |
+<!-- EnterpriseCloudResources-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseCloudResources-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_EnterpriseCloudResources |
+| Friendly Name | Enterprise resource domains hosted in the cloud |
+| Element Name | Enterprise cloud resources |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseCloudResources-GpMapping-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnterpriseCloudResources-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseCloudResources-Examples-End -->
 
-<hr/>
+<!-- EnterpriseCloudResources-End -->
 
-<!--/Scope-->
-<!--Description-->
-Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the **EnterpriseInternalProxyServers** policy. This domain list is a pipe-separated list of cloud resources. Each cloud resource can also be paired optionally with an internal proxy server by using a trailing comma followed by the proxy address. For example, **&lt;*cloudresource*&gt;|&lt;*cloudresource*&gt;|&lt;*cloudresource*&gt;,&lt;*proxy*&gt;|&lt;*cloudresource*&gt;|&lt;*cloudresource*&gt;,&lt;*proxy*&gt;|**.
+<!-- EnterpriseInternalProxyServers-Begin -->
+## EnterpriseInternalProxyServers
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Enterprise resource domains hosted in the cloud*
--   GP name: *WF_NetIsolation_EnterpriseCloudResources*
--   GP element: *WF_NetIsolation_EnterpriseCloudResourcesBox*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- EnterpriseInternalProxyServers-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1507 [10.0.10240] and later |
+<!-- EnterpriseInternalProxyServers-Applicability-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- EnterpriseInternalProxyServers-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseInternalProxyServers
+```
+<!-- EnterpriseInternalProxyServers-OmaUri-End -->
 
-<hr/>
+<!-- EnterpriseInternalProxyServers-Description-Begin -->
+<!-- Description-Source-DDF -->
+This is the comma-separated list of internal proxy servers. For example 157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
+<!-- EnterpriseInternalProxyServers-Description-End -->
 
-<!--Policy-->
-<a href="" id="networkisolation-enterpriseiprange"></a>**NetworkIsolation/EnterpriseIPRange**  
+<!-- EnterpriseInternalProxyServers-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseInternalProxyServers-Editable-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseInternalProxyServers-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `,`) |
+<!-- EnterpriseInternalProxyServers-DFProperties-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnterpriseInternalProxyServers-GpMapping-Begin -->
+**Group policy mapping**:
 
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_Intranet_Proxies |
+| Friendly Name | Intranet proxy servers for  apps |
+| Element Name | Type a proxy server IP address for the intranet |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseInternalProxyServers-GpMapping-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- EnterpriseInternalProxyServers-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseInternalProxyServers-Examples-End -->
+
+<!-- EnterpriseInternalProxyServers-End -->
+
+<!-- EnterpriseIPRange-Begin -->
+## EnterpriseIPRange
+
+<!-- EnterpriseIPRange-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1507 [10.0.10240] and later |
+<!-- EnterpriseIPRange-Applicability-End -->
+
+<!-- EnterpriseIPRange-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseIPRange
+```
+<!-- EnterpriseIPRange-OmaUri-End -->
+
+<!-- EnterpriseIPRange-Description-Begin -->
+<!-- Description-Source-DDF -->
 Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to. This is a comma-separated list of IPv4 and IPv6 ranges.
+<!-- EnterpriseIPRange-Description-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Private network ranges for  apps*
--   GP name: *WF_NetIsolation_PrivateSubnet*
--   GP element: *WF_NetIsolation_PrivateSubnetBox*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- EnterpriseIPRange-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseIPRange-Editable-End -->
 
-<!--/ADMXMapped-->
-<!--Example-->
-For example:
+<!-- EnterpriseIPRange-DFProperties-Begin -->
+**Description framework properties**:
 
-``` syntax
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `,`) |
+<!-- EnterpriseIPRange-DFProperties-End -->
+
+<!-- EnterpriseIPRange-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_PrivateSubnet |
+| Friendly Name | Private network ranges for  apps |
+| Element Name | Private subnets |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseIPRange-GpMapping-End -->
+
+<!-- EnterpriseIPRange-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+
+**Example of IP ranges**:
+
+```syntax
 10.0.0.0-10.255.255.255,157.54.0.0-157.54.255.255,
 192.168.0.0-192.168.255.255,2001:4898::-2001:4898:7fff:ffff:ffff:ffff:ffff:ffff,
 2001:4898:dc05::-2001:4898:dc05:ffff:ffff:ffff:ffff:ffff,
 2a01:110::-2a01:110:7fff:ffff:ffff:ffff:ffff:ffff,
 fd00::-fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
-       
 ```
+<!-- EnterpriseIPRange-Examples-End -->
 
-<!--/Example-->
-<!--/Policy-->
+<!-- EnterpriseIPRange-End -->
 
-<hr/>
+<!-- EnterpriseIPRangesAreAuthoritative-Begin -->
+## EnterpriseIPRangesAreAuthoritative
 
-<!--Policy-->
-<a href="" id="networkisolation-enterpriseiprangesareauthoritative"></a>**NetworkIsolation/EnterpriseIPRangesAreAuthoritative**  
+<!-- EnterpriseIPRangesAreAuthoritative-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- EnterpriseIPRangesAreAuthoritative-Applicability-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseIPRangesAreAuthoritative-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseIPRangesAreAuthoritative
+```
+<!-- EnterpriseIPRangesAreAuthoritative-OmaUri-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- EnterpriseIPRangesAreAuthoritative-Description-Begin -->
+<!-- Description-Source-ADMX -->
+This setting does not apply to desktop apps.
 
-> [!div class = "checklist"]
-> * Device
+Turns off Windows Network Isolation's automatic discovery of private network hosts in the domain corporate environment.
 
-<hr/>
+- If you enable this policy setting, it turns off Windows Network Isolation's automatic discovery of private network hosts in the domain corporate environment. Only network hosts within the address ranges configured via Group Policy will be classified as private.
 
-<!--/Scope-->
-<!--Description-->
-Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets.
+- If you disable or do not configure this policy setting, Windows Network Isolation attempts to automatically discover your private network hosts in the domain corporate environment.
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Subnet definitions are authoritative*
--   GP name: *WF_NetIsolation_Authoritative_Subnet*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+For more information see: <https://go.microsoft.com/fwlink/p/?LinkId=234043>
+<!-- EnterpriseIPRangesAreAuthoritative-Description-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- EnterpriseIPRangesAreAuthoritative-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseIPRangesAreAuthoritative-Editable-End -->
 
-<hr/>
+<!-- EnterpriseIPRangesAreAuthoritative-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="networkisolation-enterpriseinternalproxyservers"></a>**NetworkIsolation/EnterpriseInternalProxyServers**  
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- EnterpriseIPRangesAreAuthoritative-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseIPRangesAreAuthoritative-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Value | Description |
+|:--|:--|
+| 1 | Enable. |
+| 0 (Default) | Disable. |
+<!-- EnterpriseIPRangesAreAuthoritative-AllowedValues-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnterpriseIPRangesAreAuthoritative-GpMapping-Begin -->
+**Group policy mapping**:
 
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_Authoritative_Subnet |
+| Friendly Name | Subnet definitions are authoritative |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| Registry Value Name | DSubnetsAuthoritive |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseIPRangesAreAuthoritative-GpMapping-End -->
 
-<!--/Scope-->
-<!--Description-->
-This is the comma-separated list of internal proxy servers. For example "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the **EnterpriseCloudResources** policy to force traffic to the matched cloud resources through these proxies.
+<!-- EnterpriseIPRangesAreAuthoritative-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseIPRangesAreAuthoritative-Examples-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Intranet proxy servers for  apps*
--   GP name: *WF_NetIsolation_Intranet_Proxies*
--   GP element: *WF_NetIsolation_Intranet_ProxiesBox*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- EnterpriseIPRangesAreAuthoritative-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- EnterpriseNetworkDomainNames-Begin -->
+## EnterpriseNetworkDomainNames
 
-<hr/>
+<!-- EnterpriseNetworkDomainNames-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1507 [10.0.10240] and later |
+<!-- EnterpriseNetworkDomainNames-Applicability-End -->
 
-<!--Policy-->
-<a href="" id="networkisolation-enterprisenetworkdomainnames"></a>**NetworkIsolation/EnterpriseNetworkDomainNames**  
+<!-- EnterpriseNetworkDomainNames-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseNetworkDomainNames
+```
+<!-- EnterpriseNetworkDomainNames-OmaUri-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
-
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
-
-> [!div class = "checklist"]
-> * Device
-
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
-This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to. This is a comma-separated list of domains, for example "contoso.sharepoint.com, Fabrikam.com".
+<!-- EnterpriseNetworkDomainNames-Description-Begin -->
+<!-- Description-Source-DDF -->
+This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to. This is a comma-separated list of domains, for example contoso. sharepoint. com, Fabrikam. com
 
 > [!NOTE]
-> The client requires domain name to be canonical, otherwise the setting will be rejected by the client.
- 
+> The client requires domain name to be canonical, otherwise the setting will be rejected by the client. Here are the steps to create canonical domain namesTransform the ASCII characters (A-Z only) to lower case. For example, Microsoft. COM -> microsoft. com. Call IdnToAscii with IDN_USE_STD3_ASCII_RULES as the flags. Call IdnToUnicode with no flags set (dwFlags = 0).
+<!-- EnterpriseNetworkDomainNames-Description-End -->
 
-Here are the steps to create canonical domain names:
+<!-- EnterpriseNetworkDomainNames-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 
-1.  Transform the ASCII characters (A-Z only) to lower case. For example, Microsoft.COM -&gt; microsoft.com.
-2.  Call [IdnToAscii](https://msdn.microsoft.com/library/windows/desktop/dd318149.aspx) with IDN\_USE\_STD3\_ASCII\_RULES as the flags.
-3.  Call [IdnToUnicode](https://msdn.microsoft.com/library/windows/desktop/dd318151.aspx) with no flags set (dwFlags = 0).
+For more information, see the following APIs:
 
-<!--/Description-->
-<!--/Policy-->
+- [IdnToAscii function (winnls.h)](/windows/win32/api/winnls/nf-winnls-idntoascii)
+- [IdnToUnicode function (winnls.h)](/windows/win32/api/winnls/nf-winnls-idntounicode)
+<!-- EnterpriseNetworkDomainNames-Editable-End -->
 
-<hr/>
+<!-- EnterpriseNetworkDomainNames-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="networkisolation-enterpriseproxyservers"></a>**NetworkIsolation/EnterpriseProxyServers**  
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `,`) |
+<!-- EnterpriseNetworkDomainNames-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseNetworkDomainNames-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseNetworkDomainNames-Examples-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- EnterpriseNetworkDomainNames-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnterpriseProxyServers-Begin -->
+## EnterpriseProxyServers
 
-<hr/>
+<!-- EnterpriseProxyServers-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1507 [10.0.10240] and later |
+<!-- EnterpriseProxyServers-Applicability-End -->
 
-<!--/Scope-->
-<!--Description-->
-This is a comma-separated list of proxy servers. Any server on this list is considered non-enterprise. For example "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59".
+<!-- EnterpriseProxyServers-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseProxyServers
+```
+<!-- EnterpriseProxyServers-OmaUri-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Internet proxy servers for apps*
--   GP name: *WF_NetIsolation_Domain_Proxies*
--   GP element: *WF_NetIsolation_Domain_ProxiesBox*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- EnterpriseProxyServers-Description-Begin -->
+<!-- Description-Source-DDF -->
+This is a comma-separated list of proxy servers. Any server on this list is considered non-enterprise. For example 157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59.
+<!-- EnterpriseProxyServers-Description-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- EnterpriseProxyServers-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseProxyServers-Editable-End -->
 
-<hr/>
+<!-- EnterpriseProxyServers-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="networkisolation-enterpriseproxyserversareauthoritative"></a>**NetworkIsolation/EnterpriseProxyServersAreAuthoritative**  
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `,`) |
+<!-- EnterpriseProxyServers-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+<!-- EnterpriseProxyServers-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_Domain_Proxies |
+| Friendly Name | Internet proxy servers for apps |
+| Element Name | Domain Proxies |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseProxyServers-GpMapping-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnterpriseProxyServers-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseProxyServers-Examples-End -->
 
-<hr/>
+<!-- EnterpriseProxyServers-End -->
 
-<!--/Scope-->
-<!--Description-->
-Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies.
+<!-- EnterpriseProxyServersAreAuthoritative-Begin -->
+## EnterpriseProxyServersAreAuthoritative
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Proxy definitions are authoritative*
--   GP name: *WF_NetIsolation_Authoritative_Proxies*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- EnterpriseProxyServersAreAuthoritative-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- EnterpriseProxyServersAreAuthoritative-Applicability-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- EnterpriseProxyServersAreAuthoritative-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/EnterpriseProxyServersAreAuthoritative
+```
+<!-- EnterpriseProxyServersAreAuthoritative-OmaUri-End -->
 
-<hr/>
+<!-- EnterpriseProxyServersAreAuthoritative-Description-Begin -->
+<!-- Description-Source-ADMX -->
+This setting does not apply to desktop apps.
 
-<!--Policy-->
-<a href="" id="networkisolation-neutralresources"></a>**NetworkIsolation/NeutralResources**  
+Turns off Windows Network Isolation's automatic proxy discovery in the domain corporate environment.
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-</tr>
-</table>
+- If you enable this policy setting, it turns off Windows Network Isolation's automatic proxy discovery in the domain corporate environment. Only proxies configured with Group Policy are authoritative. This applies to both Internet and intranet proxies.
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+- If you disable or do not configure this policy setting, Windows Network Isolation attempts to automatically discover your proxy server addresses.
 
-> [!div class = "checklist"]
-> * Device
+For more information see: <https://go.microsoft.com/fwlink/p/?LinkId=234043>
+<!-- EnterpriseProxyServersAreAuthoritative-Description-End -->
 
-<hr/>
+<!-- EnterpriseProxyServersAreAuthoritative-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnterpriseProxyServersAreAuthoritative-Editable-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- EnterpriseProxyServersAreAuthoritative-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- EnterpriseProxyServersAreAuthoritative-DFProperties-End -->
+
+<!-- EnterpriseProxyServersAreAuthoritative-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 1 | Enable. |
+| 0 (Default) | Disable. |
+<!-- EnterpriseProxyServersAreAuthoritative-AllowedValues-End -->
+
+<!-- EnterpriseProxyServersAreAuthoritative-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_Authoritative_Proxies |
+| Friendly Name | Proxy definitions are authoritative |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| Registry Value Name | DProxiesAuthoritive |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- EnterpriseProxyServersAreAuthoritative-GpMapping-End -->
+
+<!-- EnterpriseProxyServersAreAuthoritative-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnterpriseProxyServersAreAuthoritative-Examples-End -->
+
+<!-- EnterpriseProxyServersAreAuthoritative-End -->
+
+<!-- NeutralResources-Begin -->
+## NeutralResources
+
+<!-- NeutralResources-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- NeutralResources-Applicability-End -->
+
+<!-- NeutralResources-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/NetworkIsolation/NeutralResources
+```
+<!-- NeutralResources-OmaUri-End -->
+
+<!-- NeutralResources-Description-Begin -->
+<!-- Description-Source-DDF -->
 List of domain names that can used for work or personal resource.
+<!-- NeutralResources-Description-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Domains categorized as both work and personal*
--   GP name: *WF_NetIsolation_NeutralResources*
--   GP element: *WF_NetIsolation_NeutralResourcesBox*
--   GP path: *Network/Network Isolation*
--   GP ADMX file name: *NetworkIsolation.admx*
+<!-- NeutralResources-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- NeutralResources-Editable-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
-<hr/>
+<!-- NeutralResources-DFProperties-Begin -->
+**Description framework properties**:
 
-Footnotes:
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `,`) |
+<!-- NeutralResources-DFProperties-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+<!-- NeutralResources-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/Policies-->
+| Name | Value |
+|:--|:--|
+| Name | WF_NetIsolation_NeutralResources |
+| Friendly Name | Domains categorized as both work and personal |
+| Element Name | Neutral resources |
+| Location | Computer Configuration |
+| Path | Network > Network Isolation |
+| Registry Key Name | SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation |
+| ADMX File Name | NetworkIsolation.admx |
+<!-- NeutralResources-GpMapping-End -->
 
+<!-- NeutralResources-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- NeutralResources-Examples-End -->
+
+<!-- NeutralResources-End -->
+
+<!-- NetworkIsolation-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- NetworkIsolation-CspMoreInfo-End -->
+
+<!-- NetworkIsolation-End -->
+
+## Related articles
+
+[Policy configuration service provider](policy-configuration-service-provider.md)

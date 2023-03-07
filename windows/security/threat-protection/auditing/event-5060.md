@@ -1,40 +1,36 @@
 ---
 title: 5060(F) Verification operation failed. (Windows 10)
-description: Describes security event 5060(F) Verification operation failed.
+description: Describes security event 5060(F) Verification operation failed. This event is generated when the CNG verification operation fails.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: dansimp
-ms.date: 04/19/2017
+author: vinaypamnani-msft
+ms.date: 09/08/2021
 ms.reviewer: 
-manager: dansimp
-ms.author: dansimp
+manager: aaroncz
+ms.author: vinpa
+ms.technology: itpro-security
+ms.topic: reference
 ---
 
 # 5060(F): Verification operation failed.
 
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
+This event generates when the Cryptographic Next Generation (CNG) verification operation fails.
 
-This event generates in case of CNG verification operation failure.
-
-For more information about Cryptographic Next Generation (CNG) visit these pages:
+For more information about CNG, visit these pages:
 
 -   <https://msdn.microsoft.com/library/windows/desktop/aa376214(v=vs.85).aspx>
 
 -   <https://msdn.microsoft.com/library/windows/desktop/bb204775(v=vs.85).aspx>
 
--   <http://www.microsoft.com/en-us/download/details.aspx?id=1251>
+-   <https://www.microsoft.com/download/details.aspx?id=30688>
 
--   <http://www.microsoft.com/en-us/download/details.aspx?id=30688>
+This event is used for CNG troubleshooting.
 
-This event is mainly used for Cryptographic Next Generation (CNG) troubleshooting.
-
-There is no example of this event in this document.
+There's no example of this event in this document.
 
 ***Subcategory:***&nbsp;[Audit System Integrity](audit-system-integrity.md)
 

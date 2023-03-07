@@ -1,152 +1,167 @@
 ---
 title: Replace a Windows 7 computer with a Windows 10 computer (Windows 10)
-description: A computer replace scenario for Windows 10 is quite similar to a computer refresh for Windows 10; however, because you are replacing a machine, you cannot store the backup on the old computer.
-ms.assetid: acf091c9-f8f4-4131-9845-625691c09a2a
-ms.reviewer: 
-manager: laurawi
-ms.author: greglin
-keywords: deploy, deployment, replace
-ms.prod: w10
-ms.mktglfcycl: deploy
+description: In this article, you'll learn how to replace a Windows 7 device with a Windows 10 device.
+manager: aaroncz
+ms.author: frankroj
+ms.prod: windows-client
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: mdt
-audience: itpro
-author: greg-lindsay
+author: frankroj
 ms.topic: article
+ms.technology: itpro-deploy
+ms.date: 11/28/2022
 ---
 
 # Replace a Windows 7 computer with a Windows 10 computer
 
-**Applies to**
--   Windows 10
+**Applies to:**
 
-A computer replace scenario for Windows 10 is quite similar to a computer refresh for Windows 10; however, because you are replacing a machine, you cannot store the backup on the old computer. Instead you need to store the backup to a location where the new computer can read it.
-For the purposes of this topic, we will use four machines: DC01, MDT01, PC0002, and PC0007. DC01 is a domain controller and MDT01 is a Windows Server 2012 R2 standard server. PC0002 is an old machine running Windows 7 SP1. It is going to be replaced by a new Windows 10 machine, PC0007. User State Migration Tool (USMT) will be used to backup and restore data and settings. MDT01, PC0002, and PC0007 are members of the domain contoso.com for the fictitious Contoso Corporation. For more details on the setup for this topic, please see [Deploy Windows 10 with the Microsoft Deployment Toolkit](deploy-windows-10-with-the-microsoft-deployment-toolkit.md#proof).
+- Windows 10
 
-![The machines used in this topic](../images/mdt-03-fig01.png "The machines used in this topic")
+A computer replace scenario for Windows 10 is similar to a computer refresh for Windows 10. However, because you're replacing a device, you can't store the backup on the old computer. Instead you need to store the backup to a location where the new computer can read it. The User State Migration Tool (USMT) will be used to back up and restore data and settings.
 
-Figure 1. The machines used in this topic.
+For the purposes of this article, we'll use four computers: DC01, MDT01, PC0002, and PC0007.
 
-## <a href="" id="sec01"></a>Prepare for the computer replace
+- DC01 is a domain controller for the contoso.com domain.
+- MDT01 is domain member server that hosts your deployment share.
+- PC0002 is an old computer running Windows 7 SP1 that will be replaced by PC0007.
+- PC0007 is a new computer will have the Windows 10 OS installed prior to data from PC0002 being migrated. Both PC0002 and PC0007 are members of the contoso.com domain.
 
-When preparing for the computer replace, you need to create a folder in which to store the backup, and a backup only task sequence that you run on the old computer.
+For more details on the setup for this article, see [Prepare for deployment with MDT](prepare-for-windows-deployment-with-mdt.md).
+
+![The computers used in this topic.](../images/mdt-03-fig01.png)
+The computers used in this article.
+
+>HV01 is also used in this topic to host the PC0007 virtual machine for demonstration purposes, however typically PC0007 is a physical computer.
+
+## Prepare for the computer replace
+
+ To prepare for the computer replace, you need to create a folder in which to store the backup and a backup only task sequence to run on the old computer.
 
 ### Configure the rules on the Microsoft Deployment Toolkit (MDT) Production share
 
-1.  On MDT01, using the Deployment Workbench, update the MDT Production deployment share rules.
+On **MDT01**:
 
-2.  Change the **SkipUserData=YES** option to **NO**, and click **OK**.
+1. Open the Deployment Workbench, under **Deployment Shares** right-click **MDT Production**, select **Properties**, and then select the **Rules** tab.
+
+2. Change the **SkipUserData=YES** option to **NO**, and select **OK**.
+
+3. Right-click on **MDT Production** and select **Update Deployment Share**. Then select **Next**, **Next**, and **Finish** to complete the Update Deployment Share Wizard with the default settings.
 
 ### Create and share the MigData folder
 
-1. On MDT01, log on as **CONTOSO\\Administrator**.
+On **MDT01**:
 
-2. Create and share the **E:\\MigData** folder by running the following three commands in an elevated Windows PowerShell prompt:
-   ``` powershell
-   New-Item -Path E:\MigData -ItemType directory
-   New-SmbShare ?Name MigData$ ?Path E:\MigData 
-   -ChangeAccess EVERYONE
-   icacls E:\MigData /grant '"MDT_BA":(OI)(CI)(M)'
+1. Create and share the **D:\\MigData** folder by running the following three commands in an elevated Windows PowerShell prompt:
+
+   ```powershell
+   New-Item -Path D:\MigData -ItemType directory
+   New-SmbShare -Name MigData$ -Path D:\MigData -ChangeAccess EVERYONE
+   icacls D:\MigData /grant '"MDT_BA":(OI)(CI)(M)'
    ```
-   ### Create a backup only (replace) task sequence
 
-3. On MDT01, using the Deployment Workbench, in the MDT Production deployment share, select the **Task Sequences** node and create a new folder named **Other**.
+### Create a backup only (replace) task sequence
 
-4. Right-click the **Other** folder and select **New Task Sequence**. Use the following settings for the New Task Sequence Wizard:
+1. In Deployment Workbench, under the **MDT Production** deployment share, select the **Task Sequences** node and create a new folder named **Other**.
 
-   * Task sequence ID: REPLACE-001
-   * Task sequence name: Backup Only Task Sequence
-   * Task sequence comments: Run USMT to backup user data and settings
-   * Template: Standard Client Replace Task Sequence
+2. Right-click the **Other** folder and select **New Task Sequence**. Use the following settings for the New Task Sequence Wizard:
 
-5. In the **Other** folder, double-click **Backup Only Task Sequence**, and then in the **Task Sequence** tab, review the sequence. Notice that it only contains a subset of the normal client task sequence actions.
+   - Task sequence ID: REPLACE-001
+   - Task sequence name: Backup Only Task Sequence
+   - Task sequence comments: Run USMT to back up user data and settings
+   - Template: Standard Client Replace Task Sequence
 
-   ![The Backup Only Task Sequence action list](../images/mdt-03-fig02.png "The Backup Only Task Sequence action list")
+3. In the **Other** folder, double-click **Backup Only Task Sequence**, and then in the **Task Sequence** tab, review the sequence. Notice that it only contains a subset of the normal client task sequence actions.
 
-   Figure 2. The Backup Only Task Sequence action list.
+   ![The Backup Only Task Sequence action list.](../images/mdt-03-fig02.png "The Backup Only Task Sequence action list")
 
-## <a href="" id="sec02"></a>Perform the computer replace
+   The Backup Only Task Sequence action list.
 
-During a computer replace, these are the high-level steps that occur:
+## Perform the computer replace
 
-1.  On the computer you are replacing, a special replace task sequence runs the USMT backup and, if you configured it, runs the optional full Window Imaging (WIM) backup.
+During a computer replace, the following are the high-level steps that occur:
 
-2.  On the new machine, you perform a standard bare-metal deployment. At the end of the bare-metal deployment, the USMT backup from the old computer is restored.
+1. On the computer you're replacing, a special replace task sequence runs the USMT backup and, if you configured it, runs the optional full Windows Imaging (WIM) backup.
 
-### Execute the replace task sequence
+2. On the new computer, you perform a standard bare-metal deployment. At the end of the bare-metal deployment, the USMT backup from the old computer is restored.
 
-1.  On PC0002, log on as **CONTOSO\\Administrator**.
+### Run the replace task sequence
 
-2.  Verify that you have write access to the **\\\\MDT01\\MigData$** share.
+On **PC0002**:
 
-3.  Execute **\\\\MDT01\\MDTProduction$\\Scripts\\LiteTouch.vbs**.
+1. Sign in as **CONTOSO\\Administrator** and verify that you have write access to the **\\\\MDT01\\MigData$** share.
 
-4.  Complete the Windows Deployment Wizard using the following settings:
+2. Run **\\\\MDT01\\MDTProduction$\\Scripts\\LiteTouch.vbs**.
 
-    1.  Select a task sequence to execute on this computer: Backup Only Task Sequence
-        * Specify where to save your data and settings: Specify a location
-        * Location: \\\\MDT01\\MigData$\\PC0002
-        
-        >[!NOTE]
-        >If you are replacing the computer at a remote site you should create the MigData folder on MDT02 and use that share instead.
-         
-    2.  Specify where to save a complete computer backup: Do not back up the existing computer
-    3.  Password: P@ssw0rd
+3. Complete the **Windows Deployment Wizard** using the following settings:
 
-    The task sequence will now run USMT (Scanstate.exe) to capture user data and settings of the machine.
+   - **Select a task sequence to execute on this computer**: Backup Only Task Sequence
 
-    ![The new task sequence](../images/mdt-03-fig03.png "The new task sequence")
+   - **Specify where to save your data and settings**: Specify a location
 
-    Figure 3. The new task sequence running the Capture User State action on PC0002.
+     - **Location**: \\\\MDT01\\MigData$\\PC0002
 
-5.  On MDT01, verify that you have an USMT.MIG compressed backup file in the **E:\\MigData\\PC0002\\USMT** folder.
+        > [!NOTE]
+        > If you are replacing the computer at a remote site you should create the MigData folder on MDT02 and use that share instead.
 
-    ![The USMT backup](../images/mdt-03-fig04.png "The USMT backup")
+   - **Specify where to save a complete computer backup**: Don't back up the existing computer
 
-    Figure 4. The USMT backup of PC0002.
+    The task sequence will now run USMT (Scanstate.exe) to capture user data and settings of the computer.
 
-### Deploy the PC0007 virtual machine
+    ![The new task sequence.](../images/mdt-03-fig03.png "The new task sequence")
+    The new task sequence running the Capture User State action on PC0002.
 
-1.  Create a virtual machine with the following settings:
+4. On **MDT01**, verify that you have a USMT.MIG compressed backup file in the **D:\\MigData\\PC0002\\USMT** folder.
 
-    * Name: PC0007
-    * Location: C:\\VMs
-    * Generation: 2
-    * Memory: 2048 MB
-    * Hard disk: 60 GB (dynamic disk)
+    ![The USMT backup.](../images/mdt-03-fig04.png "The USMT backup")
+    The USMT backup of PC0002.
 
-2.  Start the PC0007 virtual machine, and press **Enter** to start the Pre-Boot Execution Environment (PXE) boot. The machine will now load the Windows PE boot image from the WDS server.
+### Deploy the replacement computer
 
-    ![The initial PXE boot process](../images/mdt-03-fig05.png "The initial PXE boot process")
+To demonstrate deployment of the replacement computer, HV01 is used to host a virtual machine: PC0007.
 
-    Figure 5. The initial PXE boot process of PC0005.
+On **HV01**:
 
-3.  After Windows Preinstallation Environment (Windows PE) has booted, complete the Windows Deployment Wizard using the following settings:
+1. Create a virtual machine with the following settings:
 
-    * Password: P@ssw0rd
-    * Select a task sequence to execute on this computer:
-        * Windows 10 Enterprise x64 RTM Custom Image
-        * Computer Name: PC0007
-        * Applications: Select the Install - Adobe Reader XI - x86 application.
+   - **Name**: PC0007
+   - **Location**: C:\\VMs
+   - **Generation**: 2
+   - **Memory**: 2048 MB
+   - **Hard disk**: 60 GB (dynamic disk)
+   - Install an operating system from a network-based installation server
 
-4.  The setup now starts and does the following:
+2. Start the PC0007 virtual machine, and press **Enter** to start the Pre-Boot Execution Environment (PXE) boot. The VM will now load the Windows PE boot image from MDT01 (or MDT02 if at a remote site).
 
-    * Installs the Windows 10 Enterprise operating system.
-    * Installs the added application.
-    * Updates the operating system via your local Windows Server Update Services (WSUS) server.
-    * Restores the USMT backup from PC0002.
+    ![The initial PXE boot process.](../images/mdt-03-fig05.png "The initial PXE boot process")
 
-## Related topics
+    The initial PXE boot process of PC0007.
 
-[Get started with the Microsoft Deployment Toolkit (MDT)](get-started-with-the-microsoft-deployment-toolkit.md)
+3. After Windows Preinstallation Environment (Windows PE) has booted, complete the Windows Deployment Wizard using the following settings:
 
-[Create a Windows 10 reference image](create-a-windows-10-reference-image.md)
+   - Select a task sequence to execute on this computer:
+     - Windows 10 Enterprise x64 RTM Custom Image
+     - **Computer Name**: PC0007
+     - **Move Data and Settings**: Don't move user data and settings.
+     - **User Data (Restore)** > **Specify a location**: \\\\MDT01\\MigData$\\PC0002
+     - **Applications**: Adobe > Install - Adobe Reader
 
-[Deploy a Windows 10 image using MDT](deploy-a-windows-10-image-using-mdt.md)
+4. Setup now starts and does the following actions:
 
-[Build a distributed environment for Windows 10 deployment](build-a-distributed-environment-for-windows-10-deployment.md)
+    - Partitions and formats the disk.
+    - Installs the Windows 10 Enterprise operating system.
+    - Installs the application.
+    - Updates the operating system via your local Windows Server Update Services (WSUS) server.
+    - Restores the USMT backup from PC0002.
 
-[Refresh a Windows 7 computer with Windows 10](refresh-a-windows-7-computer-with-windows-10.md)
+You can view progress of the process by clicking the Monitoring node in the Deployment Workbench on MDT01.
 
-[Configure MDT settings](configure-mdt-settings.md)
+![Monitor progress.](../images/mdt-replace.png)
+
+## Related articles
+
+- [Get started with the Microsoft Deployment Toolkit (MDT)](get-started-with-the-microsoft-deployment-toolkit.md)
+- [Create a Windows 10 reference image](create-a-windows-10-reference-image.md)
+- [Deploy a Windows 10 image using MDT](deploy-a-windows-10-image-using-mdt.md)
+- [Build a distributed environment for Windows 10 deployment](build-a-distributed-environment-for-windows-10-deployment.md)
+- [Refresh a Windows 7 computer with Windows 10](refresh-a-windows-7-computer-with-windows-10.md)
+- [Configure MDT settings](configure-mdt-settings.md)

@@ -3,24 +3,22 @@ title: Audit account logon events (Windows 10)
 description: Determines whether to audit each instance of a user logging on to or logging off from another device in which this device is used to validate the account.
 ms.assetid: 84B44181-E325-49A1-8398-AECC3CE0A516
 ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
+ms.author: vinpa
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: none
-author: dansimp
-manager: dansimp
+author: vinaypamnani-msft
+manager: aaroncz
 audience: ITPro
-ms.collection: M365-security-compliance
 ms.topic: conceptual
-ms.date: 04/19/2017
+ms.date: 09/06/2021
+ms.technology: itpro-security
 ---
 
 # Audit account logon events
 
-**Applies to**
--   Windows 10
 
 Determines whether to audit each instance of a user logging on to or logging off from another device in which this device is used to validate the account.
 

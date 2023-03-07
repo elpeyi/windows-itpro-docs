@@ -1,105 +1,97 @@
 ---
-title: Policy CSP - Handwriting
-description: Policy CSP - Handwriting
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 08/09/2018
-ms.reviewer: 
-manager: dansimp
+title: Handwriting Policy CSP
+description: Learn more about the Handwriting Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- Handwriting-Begin -->
 # Policy CSP - Handwriting
 
+<!-- Handwriting-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Handwriting-Editable-End -->
 
+<!-- PanelDefaultModeDocked-Begin -->
+## PanelDefaultModeDocked
 
-<hr/>
+<!-- PanelDefaultModeDocked-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- PanelDefaultModeDocked-Applicability-End -->
 
-<!--Policies-->
-## Handwriting policies  
+<!-- PanelDefaultModeDocked-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Handwriting/PanelDefaultModeDocked
+```
+<!-- PanelDefaultModeDocked-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#handwriting-paneldefaultmodedocked">Handwriting/PanelDefaultModeDocked</a>
-  </dd>
-</dl>
+<!-- PanelDefaultModeDocked-Description-Begin -->
+<!-- Description-Source-ADMX -->
+The handwriting panel has 2 modes - floats near the text box, or, attached to the bottom of the screen. Default is floating near text box. If you want the panel to be fixed, use this policy to fix it to the bottom.
+<!-- PanelDefaultModeDocked-Description-End -->
 
+<!-- PanelDefaultModeDocked-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+In floating mode, the content is hidden behind a flying-in panel and results in end-user dissatisfaction. The end-user will need to drag the flying-in panel, to see the rest of the content. In the fixed mode, the flying-in panel is fixed to the bottom of the screen and doesn't require any user interaction.
 
-<hr/>
+The docked mode is especially useful in Kiosk mode, where you don't expect the end-user to drag the flying-in panel out of the way.
+<!-- PanelDefaultModeDocked-Editable-End -->
 
-<!--Policy-->
-<a href="" id="handwriting-paneldefaultmodedocked"></a>**Handwriting/PanelDefaultModeDocked**  
+<!-- PanelDefaultModeDocked-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3<sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3<sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3<sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- PanelDefaultModeDocked-DFProperties-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- PanelDefaultModeDocked-AllowedValues-Begin -->
+**Allowed values**:
 
-> [!div class = "checklist"]
-> * Device
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Disabled. |
+| 1 | Enabled. |
+<!-- PanelDefaultModeDocked-AllowedValues-End -->
 
-<hr/>
+<!-- PanelDefaultModeDocked-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10. version 1709. This policy allows an enterprise to configure the default mode for the handwriting panel.
+| Name | Value |
+|:--|:--|
+| Name | PanelDefaultModeDocked |
+| Friendly Name | Handwriting Panel Default Mode Docked |
+| Location | Computer Configuration |
+| Path | Windows Components > Handwriting |
+| Registry Key Name | Software\Policies\Microsoft\Handwriting |
+| Registry Value Name | PanelDefaultModeDocked |
+| ADMX File Name | Handwriting.admx |
+<!-- PanelDefaultModeDocked-GpMapping-End -->
 
-The handwriting panel has 2 modes - floats near the text box, or docked to the bottom of the screen. The default configuration to is floating near text box. If you want the panel to be fixed or docked, use this policy to fix it to the bottom of the screen.
+<!-- PanelDefaultModeDocked-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- PanelDefaultModeDocked-Examples-End -->
 
-In floating mode, the content is hidden behind a flying-in panel and results in end-user dissatisfaction. The end-user will need to drag the flying-in panel to see the rest of the content. In the fixed mode, the flying-in panel is fixed to the bottom of the screen and does not require any user interaction.
+<!-- PanelDefaultModeDocked-End -->
 
-The docked mode is especially useful in Kiosk mode where you do not expect the end-user to drag the flying-in panel out of the way.
+<!-- Handwriting-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- Handwriting-CspMoreInfo-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Handwriting Panel Default Mode Docked*
--   GP name: *PanelDefaultModeDocked*
--   GP path: *Windows Components/Handwriting*
--   GP ADMX file name: *Handwriting.admx*
+<!-- Handwriting-End -->
 
-<!--/ADMXMapped-->
-<!--SupportedValues-->
-The following list shows the supported values:
+## Related articles
 
--   0 (default) - Disabled.
--   1 - Enabled.
-
-<!--/SupportedValues-->
-<!--/Policy-->
-<hr/>
-
-Footnotes:
-
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
-
-<!--/Policies-->
-
+[Policy configuration service provider](policy-configuration-service-provider.md)

@@ -1,27 +1,19 @@
 ---
-title: Create a Group Policy Object (Windows 10)
-description: Create a Group Policy Object
-ms.assetid: 72a50dd7-5033-4d97-a5eb-0aff8a35cced
-ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-ms.localizationpriority: medium
-author: dansimp
-manager: dansimp
-audience: ITPro
-ms.collection: M365-security-compliance
+title: Create a Group Policy Object (Windows)
+description: Learn how to use the Active Directory Users and Computers MMC snap-in to create a GPO. You must be a member of the Domain Administrators group.
+ms.prod: windows-client
+ms.collection: 
+  - highpri
+  - tier3
 ms.topic: conceptual
-ms.date: 04/19/2017
+ms.date: 09/07/2021
+appliesto: 
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10 and later</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016 and later</a>
 ---
 
 # Create a Group Policy Object
 
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
 To create a new GPO, use the Active Directory Users and Computers MMC snap-in.
 
@@ -39,7 +31,8 @@ To create a new GPO
 
 4. In the **Name** text box, type the name for your new GPO.
 
-   >**Note:**  Be sure to use a name that clearly indicates the purpose of the GPO. Check to see if your organization has a naming convention for GPOs.
+   > [!NOTE]
+   > Be sure to use a name that clearly indicates the purpose of the GPO. Check to see if your organization has a naming convention for GPOs.
 
 5. Leave **Source Starter GPO** set to **(none)**, and then click **OK**.
 

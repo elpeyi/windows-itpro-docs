@@ -1,228 +1,212 @@
 ---
-title: Policy CSP - CredentialProviders
-description: Policy CSP - CredentialProviders
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 03/12/2018
-ms.reviewer: 
-manager: dansimp
+title: CredentialProviders Policy CSP
+description: Learn more about the CredentialProviders Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- CredentialProviders-Begin -->
 # Policy CSP - CredentialProviders
 
+> [!TIP]
+> This CSP contains ADMX-backed policies which require a special SyncML format to enable or disable. You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
+>
+> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
 
+<!-- CredentialProviders-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- CredentialProviders-Editable-End -->
 
-<hr/>
+<!-- AllowPINLogon-Begin -->
+## AllowPINLogon
 
-<!--Policies-->
-## CredentialProviders policies  
+<!-- AllowPINLogon-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1703 [10.0.15063] and later |
+<!-- AllowPINLogon-Applicability-End -->
 
-<dl>
-  <dd>
-    <a href="#credentialproviders-allowpinlogon">CredentialProviders/AllowPINLogon</a>
-  </dd>
-  <dd>
-    <a href="#credentialproviders-blockpicturepassword">CredentialProviders/BlockPicturePassword</a>
-  </dd>
-  <dd>
-    <a href="#credentialproviders-disableautomaticredeploymentcredentials">CredentialProviders/DisableAutomaticReDeploymentCredentials</a>
-  </dd>
-</dl>
+<!-- AllowPINLogon-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/CredentialProviders/AllowPINLogon
+```
+<!-- AllowPINLogon-OmaUri-End -->
 
-
-<hr/>
-
-<!--Policy-->
-<a href="" id="credentialproviders-allowpinlogon"></a>**CredentialProviders/AllowPINLogon**  
-
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
-
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
-
-> [!div class = "checklist"]
-> * Device
-
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
+<!-- AllowPINLogon-Description-Begin -->
+<!-- Description-Source-ADMX -->
 This policy setting allows you to control whether a domain user can sign in using a convenience PIN.
 
-If you enable this policy setting, a domain user can set up and sign in with a convenience PIN.
+- If you enable this policy setting, a domain user can set up and sign in with a convenience PIN.
 
-If you disable or don't configure this policy setting, a domain user can't set up and use a convenience PIN.
+- If you disable or don't configure this policy setting, a domain user can't set up and use a convenience PIN.
 
-Note: The user's domain password will be cached in the system vault when using this feature.
+> [!NOTE]
+> The user's domain password will be cached in the system vault when using this feature.
 
 To configure Windows Hello for Business, use the Administrative Template policies under Windows Hello for Business.
+<!-- AllowPINLogon-Description-End -->
 
-<!--/Description-->
+<!-- AllowPINLogon-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowPINLogon-Editable-End -->
+
+<!-- AllowPINLogon-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- AllowPINLogon-DFProperties-End -->
+
+<!-- AllowPINLogon-AdmxBacked-Begin -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP English name: *Turn on convenience PIN sign-in*
--   GP name: *AllowDomainPINLogon*
--   GP path: *System/Logon*
--   GP ADMX file name: *credentialproviders.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | AllowDomainPINLogon |
+| Friendly Name | Turn on convenience PIN sign-in |
+| Location | Computer Configuration |
+| Path | System > Logon |
+| Registry Key Name | Software\Policies\Microsoft\Windows\System |
+| Registry Value Name | AllowDomainPINLogon |
+| ADMX File Name | CredentialProviders.admx |
+<!-- AllowPINLogon-AdmxBacked-End -->
 
-<hr/>
+<!-- AllowPINLogon-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowPINLogon-Examples-End -->
 
-<!--Policy-->
-<a href="" id="credentialproviders-blockpicturepassword"></a>**CredentialProviders/BlockPicturePassword**  
+<!-- AllowPINLogon-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- BlockPicturePassword-Begin -->
+## BlockPicturePassword
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- BlockPicturePassword-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1703 [10.0.15063] and later |
+<!-- BlockPicturePassword-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- BlockPicturePassword-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/CredentialProviders/BlockPicturePassword
+```
+<!-- BlockPicturePassword-OmaUri-End -->
 
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
+<!-- BlockPicturePassword-Description-Begin -->
+<!-- Description-Source-ADMX -->
 This policy setting allows you to control whether a domain user can sign in using a picture password.
 
-If you enable this policy setting, a domain user can't set up or sign in with a picture password. 
+- If you enable this policy setting, a domain user can't set up or sign in with a picture password.
 
-If you disable or don't configure this policy setting, a domain user can set up and use a picture password.
+- If you disable or don't configure this policy setting, a domain user can set up and use a picture password.
 
-Note that the user's domain password will be cached in the system vault when using this feature.
+**Note** that the user's domain password will be cached in the system vault when using this feature.
+<!-- BlockPicturePassword-Description-End -->
 
-<!--/Description-->
+<!-- BlockPicturePassword-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- BlockPicturePassword-Editable-End -->
+
+<!-- BlockPicturePassword-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- BlockPicturePassword-DFProperties-End -->
+
+<!-- BlockPicturePassword-AdmxBacked-Begin -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP English name: *Turn off picture password sign-in*
--   GP name: *BlockDomainPicturePassword*
--   GP path: *System/Logon*
--   GP ADMX file name: *credentialproviders.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | BlockDomainPicturePassword |
+| Friendly Name | Turn off picture password sign-in |
+| Location | Computer Configuration |
+| Path | System > Logon |
+| Registry Key Name | Software\Policies\Microsoft\Windows\System |
+| Registry Value Name | BlockDomainPicturePassword |
+| ADMX File Name | CredentialProviders.admx |
+<!-- BlockPicturePassword-AdmxBacked-End -->
 
-<hr/>
+<!-- BlockPicturePassword-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- BlockPicturePassword-Examples-End -->
 
-<!--Policy-->
-<a href="" id="credentialproviders-disableautomaticredeploymentcredentials"></a>**CredentialProviders/DisableAutomaticReDeploymentCredentials**  
+<!-- BlockPicturePassword-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- DisableAutomaticReDeploymentCredentials-Begin -->
+## DisableAutomaticReDeploymentCredentials
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- DisableAutomaticReDeploymentCredentials-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- DisableAutomaticReDeploymentCredentials-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- DisableAutomaticReDeploymentCredentials-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/CredentialProviders/DisableAutomaticReDeploymentCredentials
+```
+<!-- DisableAutomaticReDeploymentCredentials-OmaUri-End -->
 
-<hr/>
+<!-- DisableAutomaticReDeploymentCredentials-Description-Begin -->
+<!-- Description-Source-DDF -->
+Boolean policy to disable the visibility of the credential provider that triggers the PC refresh on a device. This policy does not actually trigger the refresh. The admin user is required to authenticate to trigger the refresh on the target device. The Autopilot Reset feature allows admin to reset devices to a known good managed state while preserving the management enrollment. After the Autopilot Reset is triggered the devices are for ready for use by information workers or students.
+<!-- DisableAutomaticReDeploymentCredentials-Description-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. Boolean policy to disable the visibility of the credential provider that triggers the PC refresh on a device. This policy does not actually trigger the refresh. The admin user is required to authenticate to trigger the refresh on the target device.
+<!-- DisableAutomaticReDeploymentCredentials-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DisableAutomaticReDeploymentCredentials-Editable-End -->
 
-The Autopilot Reset feature allows admin to reset devices to a known good managed state while preserving the management enrollment. After the Autopilot Reset is triggered the devices are for ready for use by information workers or students.
+<!-- DisableAutomaticReDeploymentCredentials-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--/Description-->
-<!--SupportedValues-->
-The following list shows the supported values:
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- DisableAutomaticReDeploymentCredentials-DFProperties-End -->
 
-- 0 - Enable the visibility of the credentials for Autopilot Reset
-- 1 - Disable visibility of the credentials for Autopilot Reset
+<!-- DisableAutomaticReDeploymentCredentials-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedValues-->
-<!--/Policy-->
-<hr/>
+| Value | Description |
+|:--|:--|
+| 0 | Enable the visibility of the credentials for Autopilot Reset. |
+| 1 (Default) | Disable visibility of the credentials for Autopilot Reset. |
+<!-- DisableAutomaticReDeploymentCredentials-AllowedValues-End -->
 
-Footnotes:
+<!-- DisableAutomaticReDeploymentCredentials-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- DisableAutomaticReDeploymentCredentials-Examples-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+<!-- DisableAutomaticReDeploymentCredentials-End -->
 
-<!--/Policies-->
+<!-- CredentialProviders-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- CredentialProviders-CspMoreInfo-End -->
+
+<!-- CredentialProviders-End -->
+
+## Related articles
+
+[Policy configuration service provider](policy-configuration-service-provider.md)

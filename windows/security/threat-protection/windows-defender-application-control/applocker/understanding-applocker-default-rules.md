@@ -1,33 +1,39 @@
 ---
-title: Understanding AppLocker default rules (Windows 10)
+title: Understanding AppLocker default rules (Windows)
 description: This topic for IT professional describes the set of rules that can be used to ensure that required Windows system files are allowed to run when the policy is applied.
 ms.assetid: bdb03d71-05b7-41fb-96e3-a289ce1866e1
 ms.reviewer: 
-ms.author: macapara
-ms.prod: w10
+ms.author: vinpa
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: mjcaparas
-manager: dansimp
+author: vinaypamnani-msft
+manager: aaroncz
 audience: ITPro
-ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: itpro-security
 ---
 
 # Understanding AppLocker default rules
 
 **Applies to**
-- Windows 10
-- Windows Server
+
+- Windows 10
+- Windows 11
+- Windows Server 2016 and above
+
+>[!NOTE]
+>Some capabilities of Windows Defender Application Control are only available on specific Windows versions. Learn more about the [Windows Defender Application Control feature availability](/windows/security/threat-protection/windows-defender-application-control/feature-availability).
 
 This topic for IT professional describes the set of rules that can be used to ensure that required Windows system files are allowed to run when the policy is applied.
 
 AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection.
 
->**Important:**  You can use the default rules as a template when creating your own rules. However, these rules are only meant to function as a starter policy when you are first testing AppLocker rules so that the system files in the Windows folders will be allowed to run.
+> [!IMPORTANT]
+> You can use the default rules as a template when creating your own rules. However, these rules are only meant to function as a starter policy when you are first testing AppLocker rules so that the system files in the Windows folders will be allowed to run.
  
 If you require additional app security, you might need to modify the rules created from the built-in default rule collection. For example, the default rule to allow all users to run .exe files in the Windows folder is based on a path condition that allows all files within the Windows folder to run. 
 The Windows folder contains a Temp subfolder to which the Users group is given the following permissions:

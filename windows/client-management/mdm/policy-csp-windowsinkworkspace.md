@@ -1,162 +1,158 @@
 ---
-title: Policy CSP - WindowsInkWorkspace
-description: Policy CSP - WindowsInkWorkspace
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 05/14/2018
-ms.reviewer: 
-manager: dansimp
+title: WindowsInkWorkspace Policy CSP
+description: Learn more about the WindowsInkWorkspace Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- WindowsInkWorkspace-Begin -->
 # Policy CSP - WindowsInkWorkspace
 
+<!-- WindowsInkWorkspace-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- WindowsInkWorkspace-Editable-End -->
 
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Begin -->
+## AllowSuggestedAppsInWindowsInkWorkspace
 
-<hr/>
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Applicability-End -->
 
-<!--Policies-->
-## WindowsInkWorkspace policies  
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsInkWorkspace/AllowSuggestedAppsInWindowsInkWorkspace
+```
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#windowsinkworkspace-allowsuggestedappsinwindowsinkworkspace">WindowsInkWorkspace/AllowSuggestedAppsInWindowsInkWorkspace</a>
-  </dd>
-  <dd>
-    <a href="#windowsinkworkspace-allowwindowsinkworkspace">WindowsInkWorkspace/AllowWindowsInkWorkspace</a>
-  </dd>
-</dl>
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Description-Begin -->
+<!-- Description-Source-ADMX -->
+Allow suggested apps in Windows Ink Workspace
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Description-End -->
 
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Editable-End -->
 
-<hr/>
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="windowsinkworkspace-allowsuggestedappsinwindowsinkworkspace"></a>**WindowsInkWorkspace/AllowSuggestedAppsInWindowsInkWorkspace**  
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Value | Description |
+|:--|:--|
+| 0 | Not allowed. |
+| 1 (Default) | Allowed. |
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-AllowedValues-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-GpMapping-Begin -->
+**Group policy mapping**:
 
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | AllowSuggestedAppsInWindowsInkWorkspace |
+| Friendly Name | Allow suggested apps in Windows Ink Workspace |
+| Location | Computer Configuration |
+| Path | Windows Components > Windows Ink Workspace |
+| Registry Key Name | Software\Policies\Microsoft\WindowsInkWorkspace |
+| Registry Value Name | AllowSuggestedAppsInWindowsInkWorkspace |
+| ADMX File Name | WindowsInkWorkspace.admx |
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-GpMapping-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1607. Show recommended app suggestions in the ink workspace.
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-Examples-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Allow suggested apps in Windows Ink Workspace*
--   GP name: *AllowSuggestedAppsInWindowsInkWorkspace*
--   GP path: *Windows Components/Windows Ink Workspace*
--   GP ADMX file name: *WindowsInkWorkspace.admx*
+<!-- AllowSuggestedAppsInWindowsInkWorkspace-End -->
 
-<!--/ADMXMapped-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- AllowWindowsInkWorkspace-Begin -->
+## AllowWindowsInkWorkspace
 
--   0 - app suggestions are not allowed.
--   1 (default) -allow app suggestions.
+<!-- AllowWindowsInkWorkspace-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- AllowWindowsInkWorkspace-Applicability-End -->
 
-<!--/SupportedValues-->
-<!--/Policy-->
+<!-- AllowWindowsInkWorkspace-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsInkWorkspace/AllowWindowsInkWorkspace
+```
+<!-- AllowWindowsInkWorkspace-OmaUri-End -->
 
-<hr/>
+<!-- AllowWindowsInkWorkspace-Description-Begin -->
+<!-- Description-Source-DDF -->
+Specifies whether to allow the user to access the ink workspace.
+<!-- AllowWindowsInkWorkspace-Description-End -->
 
-<!--Policy-->
-<a href="" id="windowsinkworkspace-allowwindowsinkworkspace"></a>**WindowsInkWorkspace/AllowWindowsInkWorkspace**  
+<!-- AllowWindowsInkWorkspace-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowWindowsInkWorkspace-Editable-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- AllowWindowsInkWorkspace-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 2 |
+<!-- AllowWindowsInkWorkspace-DFProperties-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- AllowWindowsInkWorkspace-AllowedValues-Begin -->
+**Allowed values**:
 
-<hr/>
+| Value | Description |
+|:--|:--|
+| 0 | Access to ink workspace is disabled. The feature is turned off. |
+| 1 | Ink workspace is enabled (feature is turned on), but the user cannot access it above the lock screen. |
+| 2 (Default) | Ink workspace is enabled (feature is turned on), and the user is allowed to use it above the lock screen. |
+<!-- AllowWindowsInkWorkspace-AllowedValues-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1607. Specifies whether to allow the user to access the ink workspace.
+<!-- AllowWindowsInkWorkspace-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Allow Windows Ink Workspace*
--   GP name: *AllowWindowsInkWorkspace*
--   GP element: *AllowWindowsInkWorkspaceDropdown*
--   GP path: *Windows Components/Windows Ink Workspace*
--   GP ADMX file name: *WindowsInkWorkspace.admx*
+| Name | Value |
+|:--|:--|
+| Name | AllowWindowsInkWorkspace |
+| Friendly Name | Allow Windows Ink Workspace |
+| Element Name | Choose one of the following actions |
+| Location | Computer Configuration |
+| Path | Windows Components > Windows Ink Workspace |
+| Registry Key Name | Software\Policies\Microsoft\WindowsInkWorkspace |
+| ADMX File Name | WindowsInkWorkspace.admx |
+<!-- AllowWindowsInkWorkspace-GpMapping-End -->
 
-<!--/ADMXMapped-->
-<!--SupportedValues-->
-Value type is int. The following list shows the supported values:
+<!-- AllowWindowsInkWorkspace-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowWindowsInkWorkspace-Examples-End -->
 
--   0 - access to ink workspace is disabled. The feature is turned off.
--   1 - ink workspace is enabled (feature is turned on), but the user cannot access it above the lock screen.
--   2 (default) - ink workspace is enabled (feature is turned on), and the user is allowed to use it above the lock screen.
+<!-- AllowWindowsInkWorkspace-End -->
 
-<!--/SupportedValues-->
-<!--/Policy-->
-<hr/>
+<!-- WindowsInkWorkspace-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- WindowsInkWorkspace-CspMoreInfo-End -->
 
-Footnotes:
+<!-- WindowsInkWorkspace-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+## Related articles
 
-<!--/Policies-->
-
+[Policy configuration service provider](policy-configuration-service-provider.md)

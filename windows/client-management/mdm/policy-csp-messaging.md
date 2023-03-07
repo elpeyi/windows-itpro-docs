@@ -1,211 +1,194 @@
 ---
-title: Policy CSP - Messaging
-description: Policy CSP - Messaging
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 08/09/2018
-ms.reviewer: 
-manager: dansimp
+title: Messaging Policy CSP
+description: Learn more about the Messaging Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- Messaging-Begin -->
 # Policy CSP - Messaging
 
+<!-- Messaging-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Messaging-Editable-End -->
 
+<!-- AllowMessageSync-Begin -->
+## AllowMessageSync
 
-<hr/>
+<!-- AllowMessageSync-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1607 [10.0.14393] and later |
+<!-- AllowMessageSync-Applicability-End -->
 
-<!--Policies-->
-## Messaging policies  
+<!-- AllowMessageSync-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Messaging/AllowMessageSync
+```
+<!-- AllowMessageSync-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#messaging-allowmms">Messaging/AllowMMS</a>
-  </dd>
-  <dd>
-    <a href="#messaging-allowmessagesync">Messaging/AllowMessageSync</a>
-  </dd>
-  <dd>
-    <a href="#messaging-allowrcs">Messaging/AllowRCS</a>
-  </dd>
-</dl>
+<!-- AllowMessageSync-Description-Begin -->
+<!-- Description-Source-ADMX -->
+This policy setting allows backup and restore of cellular text messages to Microsoft's cloud services.
+<!-- AllowMessageSync-Description-End -->
 
+<!-- AllowMessageSync-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 
-<hr/>
+Disable this feature to avoid information being stored on servers outside of your organization's control.
+<!-- AllowMessageSync-Editable-End -->
 
-<!--Policy-->
-<a href="" id="messaging-allowmms"></a>**Messaging/AllowMMS**  
+<!-- AllowMessageSync-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>2</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>2</sup></td>
-</tr>
-</table>
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowMessageSync-DFProperties-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- AllowMessageSync-AllowedValues-Begin -->
+**Allowed values**:
 
-> [!div class = "checklist"]
-> * Device
+| Value | Description |
+|:--|:--|
+| 0 | Message sync is not allowed and cannot be changed by the user. |
+| 1 (Default) | Message sync is allowed. The user can change this setting. |
+<!-- AllowMessageSync-AllowedValues-End -->
 
-<hr/>
+<!-- AllowMessageSync-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/Scope-->
-<!--Description-->
-> [!NOTE]
-> This policy is only enforced in Windows 10 Mobile and not supported in Windows 10 for desktop.
+| Name | Value |
+|:--|:--|
+| Name | AllowMessageSync |
+| Friendly Name | Allow Message Service Cloud Sync |
+| Location | Computer Configuration |
+| Path | Windows Components > Messaging |
+| Registry Key Name | Software\Policies\Microsoft\Windows\Messaging |
+| Registry Value Name | AllowMessageSync |
+| ADMX File Name | messaging.admx |
+<!-- AllowMessageSync-GpMapping-End -->
 
-Added in Windows 10, version 1703. Enables or disables the MMS send/receive functionality on the device. For enterprises, this policy can be used to disable MMS on devices as part of the auditing or management requirement.
+<!-- AllowMessageSync-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowMessageSync-Examples-End -->
 
-<!--/Description-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- AllowMessageSync-End -->
 
--   0 - Disabled.
--   1 (default) - Enabled.
+<!-- AllowMMS-Begin -->
+## AllowMMS
 
-<!--/SupportedValues-->
-<!--/Policy-->
+<!-- AllowMMS-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :x: Pro <br> :x: Enterprise <br> :x: Education <br> :x: Windows SE | :heavy_check_mark: Windows 10, version 1703 [10.0.15063] and later |
+<!-- AllowMMS-Applicability-End -->
 
-<hr/>
+<!-- AllowMMS-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Messaging/AllowMMS
+```
+<!-- AllowMMS-OmaUri-End -->
 
-<!--Policy-->
-<a href="" id="messaging-allowmessagesync"></a>**Messaging/AllowMessageSync**  
+<!-- AllowMMS-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting allows you to enable or disable the sending and receiving cellular MMS messages.
+<!-- AllowMMS-Description-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>1</sup></td>
-</tr>
-</table>
+<!-- AllowMMS-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowMMS-Editable-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- AllowMMS-DFProperties-Begin -->
+**Description framework properties**:
 
-> [!div class = "checklist"]
-> * Device
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowMMS-DFProperties-End -->
 
-<hr/>
+<!-- AllowMMS-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1607. Enables text message back up and restore and Messaging Everywhere. This policy allows an organization to disable these features to avoid information being stored on servers outside of their control.
+| Value | Description |
+|:--|:--|
+| 1 (Default) | Allow. |
+| 0 | Block. |
+<!-- AllowMMS-AllowedValues-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Allow Message Service Cloud Sync*
--   GP name: *AllowMessageSync*
--   GP path: *Windows Components/Messaging*
--   GP ADMX file name: *messaging.admx*
+<!-- AllowMMS-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowMMS-Examples-End -->
 
-<!--/ADMXMapped-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- AllowMMS-End -->
 
--   0 - message sync is not allowed and cannot be changed by the user.
--   1 - message sync is allowed. The user can change this setting.
+<!-- AllowRCS-Begin -->
+## AllowRCS
 
-<!--/SupportedValues-->
-<!--/Policy-->
+<!-- AllowRCS-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :x: Pro <br> :x: Enterprise <br> :x: Education <br> :x: Windows SE | :heavy_check_mark: Windows 10, version 1703 [10.0.15063] and later |
+<!-- AllowRCS-Applicability-End -->
 
-<hr/>
+<!-- AllowRCS-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Messaging/AllowRCS
+```
+<!-- AllowRCS-OmaUri-End -->
 
-<!--Policy-->
-<a href="" id="messaging-allowrcs"></a>**Messaging/AllowRCS**  
+<!-- AllowRCS-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting allows you to enable or disable the sending and receiving of cellular RCS (Rich Communication Services) messages.
+<!-- AllowRCS-Description-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>2</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>2</sup></td>
-</tr>
-</table>
+<!-- AllowRCS-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowRCS-Editable-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- AllowRCS-DFProperties-Begin -->
+**Description framework properties**:
 
-> [!div class = "checklist"]
-> * Device
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowRCS-DFProperties-End -->
 
-<hr/>
+<!-- AllowRCS-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/Scope-->
-<!--Description-->
-> [!NOTE]
-> This policy is only enforced in Windows 10 Mobile and not supported in Windows 10 for desktop.
+| Value | Description |
+|:--|:--|
+| 1 (Default) | Allow. |
+| 0 | Block. |
+<!-- AllowRCS-AllowedValues-End -->
 
-Added in Windows 10, version 1703. Enables or disables the RCS send/receive functionality on the device. For enterprises, this policy can be used to disable RCS on devices as part of the auditing or management requirement.
+<!-- AllowRCS-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowRCS-Examples-End -->
 
-<!--/Description-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- AllowRCS-End -->
 
--   0 - Disabled.
--   1 (default) - Enabled.
+<!-- Messaging-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- Messaging-CspMoreInfo-End -->
 
-<!--/SupportedValues-->
-<!--/Policy-->
-<hr/>
+<!-- Messaging-End -->
 
-Footnotes:
+## Related articles
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
-
-<!--/Policies-->
-
+[Policy configuration service provider](policy-configuration-service-provider.md)

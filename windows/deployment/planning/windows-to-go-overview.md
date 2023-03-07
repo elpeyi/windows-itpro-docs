@@ -1,38 +1,36 @@
 ---
 title: Windows To Go feature overview (Windows 10)
-description: Windows To Go is a feature in Windows 10 Enterprise and Windows 10 Education that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on PCs.
-ms.assetid: 9df82b03-acba-442c-801d-56db241f8d42
-ms.reviewer: 
-manager: laurawi
-ms.author: greglin
-keywords: workspace, mobile, installation, image, USB, device, image, edu
-ms.prod: w10
-ms.mktglfcycl: deploy
-ms.pagetype: mobility, edu
-ms.sitesec: library
-audience: itpro
-author: greg-lindsay
+description: Windows To Go is a feature in Windows 10 Enterprise and Windows 10 Education that lets you create a workspace that can be booted from a USB-connected drive.
+manager: aaroncz
+ms.author: frankroj
+ms.prod: windows-client
+author: frankroj
 ms.topic: article
+ms.technology: itpro-deploy
+ms.collection: highpri, tier2
+ms.date: 10/28/2022
 ---
 
 # Windows To Go: feature overview
-
 
 **Applies to**
 
 - Windows 10
 
 > [!IMPORTANT]
-> Windows To Go is no longer being developed. The feature does not support feature updates and therefore does not enable you to stay current. It also requires a specific type of USB that is no longer supported by many OEMs.
+> Windows To Go is removed in Windows 10, version 2004 and later operating systems. The feature does not support feature updates and therefore does not enable you to stay current. It also requires a specific type of USB that is no longer supported by many OEMs.
 
 Windows To Go is a feature in Windows 10 Enterprise and Windows 10 Education that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on PCs.
 
-PCs that meet the Windows 7 or later [certification requirements](https://go.microsoft.com/fwlink/p/?LinkId=618711) can run Windows 10 in a Windows To Go workspace, regardless of the operating system running on the PC. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way. Windows To Go is not intended to replace desktops, laptops or supplant other mobility offerings. Rather, it provides support for efficient use of resources for alternative workplace scenarios. There are some additional considerations that you should keep in mind before you start to use Windows To Go:
+PCs that meet the Windows 7 or later [certification requirements](/previous-versions/windows/hardware/cert-program/) can run Windows 10 in a Windows To Go workspace, regardless of the operating system running on the PC. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way. Windows To Go is not intended to replace desktops, laptops or supplant other mobility offerings. Rather, it provides support for efficient use of resources for alternative workplace scenarios. There are some additional considerations that you should keep in mind before you start to use Windows To Go:
 
-- [Differences between Windows To Go and a typical installation of Windows](#bkmk-wtgdif)
-- [Roaming with Windows To Go](#bkmk-wtgroam)
-- [Prepare for Windows To Go](#wtg-prep-intro)
-- [Hardware considerations for Windows To Go](#wtg-hardware)
+- [Windows To Go: feature overview](#windows-to-go-feature-overview)
+  - [<a href="" id="bkmk-wtgdif"></a>Differences between Windows To Go and a typical installation of Windows](#differences-between-windows-to-go-and-a-typical-installation-of-windows)
+  - [<a href="" id="bkmk-wtgroam"></a>Roaming with Windows To Go](#roaming-with-windows-to-go)
+  - [<a href="" id="wtg-prep-intro"></a>Prepare for Windows To Go](#prepare-for-windows-to-go)
+  - [<a href="" id="wtg-hardware"></a>Hardware considerations for Windows To Go](#hardware-considerations-for-windows-to-go)
+  - [Additional resources](#additional-resources)
+  - [Related topics](#related-topics)
 
 > [!NOTE]
 > Windows To Go is not supported on Windows RT.
@@ -41,12 +39,12 @@ PCs that meet the Windows 7 or later [certification requirements](https://go.mic
 
 Windows To Go workspace operates just like any other installation of Windows with a few exceptions. These exceptions are:
 
-- **Internal disks are offline.** To ensure data isn’t accidentally disclosed, internal hard disks on the host computer are offline by default when booted into a Windows To Go workspace. Similarly if a Windows To Go drive is inserted into a running system, the Windows To Go drive will not be listed in Windows Explorer.
+- **Internal disks are offline.** To ensure data isn't accidentally disclosed, internal hard disks on the host computer are offline by default when booted into a Windows To Go workspace. Similarly if a Windows To Go drive is inserted into a running system, the Windows To Go drive will not be listed in Windows Explorer.
 - **Trusted Platform Module (TPM) is not used.** When using BitLocker Drive Encryption a pre-operating system boot password will be used for security rather than the TPM since the TPM is tied to a specific computer and Windows To Go drives will move between computers.
 - **Hibernate is disabled by default.** To ensure that the Windows To Go workspace is able to move between computers easily, hibernation is disabled by default. Hibernation can be re-enabled by using Group Policy settings.
 - **Windows Recovery Environment is not available.** In the rare case that you need to recover your Windows To Go drive, you should re-image it with a fresh image of Windows.
-- **Refreshing or resetting a Windows To Go workspace is not supported.** Resetting to the manufacturer’s standard for the computer doesn’t apply when running a Windows To Go workspace, so the feature was disabled.
-- **Upgrading a Windows To Go workspace is not supported.** Older Windows 8 or Windows 8.1 Windows To Go workspaces cannot be upgraded to Windows 10 workspaces, nor can Windows 10 Windows To Go workspaces be upgraded to future versions of Windows 10. For new versions, the workspace needs to be re-imaged with a fresh image of Windows.
+- **Refreshing or resetting a Windows To Go workspace is not supported.** Resetting to the manufacturer's standard for the computer doesn't apply when running a Windows To Go workspace, so the feature was disabled.
+- **Upgrading a Windows To Go workspace is not supported.** Older Windows 8 or Windows 8.1 Windows To Go workspaces cannot be upgraded to Windows 10 workspaces, nor can Windows 10 Windows To Go workspaces be upgraded to future versions of Windows 10. For new versions, the workspace needs to be re-imaged with a fresh image of Windows.
 
 ## <a href="" id="bkmk-wtgroam"></a>Roaming with Windows To Go
 
@@ -56,9 +54,9 @@ The applications that you want to use from the Windows To Go workspace should be
 
 ## <a href="" id="wtg-prep-intro"></a>Prepare for Windows To Go
 
-Enterprises install Windows on a large group of computers either by using configuration management software (such as System Center Configuration Manager), or by using standard Windows deployment tools such as DiskPart and the Deployment Image Servicing and Management (DISM) tool.
+Enterprises install Windows on a large group of computers either by using configuration management software (such as Microsoft Configuration Manager), or by using standard Windows deployment tools such as DiskPart and the Deployment Image Servicing and Management (DISM) tool.
 
-These same tools can be used to provision Windows To Go drive, just as you would if you were planning for provisioning a new class of mobile PCs. You can use the [Windows Assessment and Deployment Kit](https://go.microsoft.com/fwlink/p/?LinkId=526803) to review deployment tools available.
+These same tools can be used to provision Windows To Go drive, just as you would if you were planning for provisioning a new class of mobile PCs. You can use the [Windows Assessment and Deployment Kit](/windows-hardware/get-started/adk-install) to review deployment tools available.
 
 > [!IMPORTANT]
 > Make sure you use the versions of the deployment tools provided for the version of Windows you are deploying. There have been many enhancements made to support Windows To Go. Using versions of the deployment tools released for earlier versions of Windows to provision a Windows To Go drive is not supported.
@@ -92,9 +90,9 @@ As of the date of publication, the following are the USB drives currently certif
 > [!WARNING]
 > Using a USB drive that has not been certified is not supported.
 
-- IronKey Workspace W700 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w700.html](https://go.microsoft.com/fwlink/p/?LinkId=618714))
-- IronKey Workspace W500 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w500.html](https://go.microsoft.com/fwlink/p/?LinkId=618717))
-- IronKey Workspace W300 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w300.html](https://go.microsoft.com/fwlink/p/?LinkId=618718))
+- IronKey Workspace W700 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w700.html](https://www.kingston.com/support/technical/products?model=dtws))
+- IronKey Workspace W500 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w500.html](https://www.kingston.com/support/technical/products?model=dtws))
+- IronKey Workspace W300 ([http://www.ironkey.com/windows-to-go-drives/ironkey-workspace-w300.html](https://www.kingston.com/support/technical/products?model=dtws))
 - Kingston DataTraveler Workspace for Windows To Go ([http://www.kingston.com/wtg/](https://go.microsoft.com/fwlink/p/?LinkId=618719))
 - Spyrus Portable Workplace ([http://www.spyruswtg.com/](https://go.microsoft.com/fwlink/p/?LinkId=618720))
 
@@ -123,7 +121,7 @@ As of the date of publication, the following are the USB drives currently certif
 
 -   Western Digital My Passport Enterprise ([http://www.wd.com/wtg](https://go.microsoft.com/fwlink/p/?LinkId=618722))
 
-    We recommend that you run the WD Compass utility to prepare the Western Digital My Passport Enterprise drive for provisioning with Windows To Go.  For more information about the WD Compass utility please refer to [http://www.wd.com/wtg](https://go.microsoft.com/fwlink/p/?LinkId=618722)
+    We recommend that you run the WD Compass utility to prepare the Western Digital My Passport Enterprise drive for provisioning with Windows To Go.  For more information about the WD Compass utility please refer to [http://www.wd.com/wtg](https://go.microsoft.com/fwlink/p/?LinkId=618722)
 
 **For host computers**
 
@@ -135,93 +133,27 @@ When assessing the use of a PC as a host for a Windows To Go workspace you shoul
 
 The following table details the characteristics that the host computer must have to be used with Windows To Go:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Item</th>
-<th align="left">Requirement</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Boot process</p></td>
-<td align="left"><p>Capable of USB boot</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Firmware</p></td>
-<td align="left"><p>USB boot enabled. (PCs certified for use with Windows 7 or later can be configured to boot directly from USB, check with the hardware manufacturer if you are unsure of the ability of your PC to boot from USB)</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>Processor architecture</p></td>
-<td align="left"><p>Must support the image on the Windows To Go drive</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>External USB Hubs</p></td>
-<td align="left"><p>Not supported; connect the Windows To Go drive directly to the host machine</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>Processor</p></td>
-<td align="left"><p>1 Ghz or faster</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>RAM</p></td>
-<td align="left"><p>2 GB or greater</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>Graphics</p></td>
-<td align="left"><p>DirectX 9 graphics device with WDDM 1.2 or greater driver</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>USB port</p></td>
-<td align="left"><p>USB 2.0 port or greater</p></td>
-</tr>
-</tbody>
-</table>
+|Item|Requirement|
+|--- |--- |
+|Boot process|Capable of USB boot|
+|Firmware|USB boot enabled. (PCs certified for use with Windows 7 or later can be configured to boot directly from USB, check with the hardware manufacturer if you are unsure of the ability of your PC to boot from USB)|
+|Processor architecture|Must support the image on the Windows To Go drive|
+|External USB Hubs|Not supported; connect the Windows To Go drive directly to the host machine|
+|Processor|1 Ghz or faster|
+|RAM|2 GB or greater|
+|Graphics|DirectX 9 graphics device with WDDM 1.2 or greater driver|
+|USB port|USB 2.0 port or greater|
 
 **Checking for architectural compatibility between the host PC and the Windows To Go drive**
 
 In addition to the USB boot support in the BIOS, the Windows 10 image on your Windows To Go drive must be compatible with the processor architecture and the firmware of the host PC as shown in the table below.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Host PC Firmware Type</th>
-<th align="left">Host PC Processor Architecture</th>
-<th align="left">Compatible Windows To Go Image Architecture</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Legacy BIOS</p></td>
-<td align="left"><p>32-bit</p></td>
-<td align="left"><p>32-bit only</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Legacy BIOS</p></td>
-<td align="left"><p>64-bit</p></td>
-<td align="left"><p>32-bit and 64-bit</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>UEFI BIOS</p></td>
-<td align="left"><p>32-bit</p></td>
-<td align="left"><p>32-bit only</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>UEFI BIOS</p></td>
-<td align="left"><p>64-bit</p></td>
-<td align="left"><p>64-bit only</p></td>
-</tr>
-</tbody>
-</table>
+|Host PC Firmware Type|Host PC Processor Architecture|Compatible Windows To Go Image Architecture|
+|--- |--- |--- |
+|Legacy BIOS|32-bit|32-bit only|
+|Legacy BIOS|64-bit|32-bit and 64-bit|
+|UEFI BIOS|32-bit|32-bit only|
+|UEFI BIOS|64-bit|64-bit only|
 
 ## Additional resources
 
@@ -231,8 +163,8 @@ In addition to the USB boot support in the BIOS, the Windows 10 image on your Wi
 
 ## Related topics
 
-[Deploy Windows To Go in your organization](https://go.microsoft.com/fwlink/p/?LinkId=619975)<br>
-[Windows To Go: frequently asked questions](windows-to-go-frequently-asked-questions.md)<br>
+[Deploy Windows To Go in your organization](../deploy-windows-to-go.md)<br>
+[Windows To Go: frequently asked questions](windows-to-go-frequently-asked-questions.yml)<br>
 [Prepare your organization for Windows To Go](prepare-your-organization-for-windows-to-go.md)<br>
 [Deployment considerations for Windows To Go](deployment-considerations-for-windows-to-go.md)<br>
 [Security and data protection considerations for Windows To Go](security-and-data-protection-considerations-for-windows-to-go.md)<br>

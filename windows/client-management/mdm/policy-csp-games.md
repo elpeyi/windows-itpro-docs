@@ -1,91 +1,80 @@
 ---
-title: Policy CSP - Games
-description: Policy CSP - Games
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 03/12/2018
-ms.reviewer: 
-manager: dansimp
+title: Games Policy CSP
+description: Learn more about the Games Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- Games-Begin -->
 # Policy CSP - Games
 
+<!-- Games-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Games-Editable-End -->
 
+<!-- AllowAdvancedGamingServices-Begin -->
+## AllowAdvancedGamingServices
 
-<hr/>
+<!-- AllowAdvancedGamingServices-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1703 [10.0.15063] and later |
+<!-- AllowAdvancedGamingServices-Applicability-End -->
 
-<!--Policies-->
-## Games policies  
+<!-- AllowAdvancedGamingServices-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Games/AllowAdvancedGamingServices
+```
+<!-- AllowAdvancedGamingServices-OmaUri-End -->
 
-<dl>
-  <dd>
-    <a href="#games-allowadvancedgamingservices">Games/AllowAdvancedGamingServices</a>
-  </dd>
-</dl>
+<!-- AllowAdvancedGamingServices-Description-Begin -->
+<!-- Description-Source-DDF -->
+Specifies whether advanced gaming services can be used. These services may send data to Microsoft or publishers of games that use these services.
+<!-- AllowAdvancedGamingServices-Description-End -->
 
+<!-- AllowAdvancedGamingServices-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowAdvancedGamingServices-Editable-End -->
 
-<hr/>
+<!-- AllowAdvancedGamingServices-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="games-allowadvancedgamingservices"></a>**Games/AllowAdvancedGamingServices**  
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- AllowAdvancedGamingServices-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- AllowAdvancedGamingServices-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Value | Description |
+|:--|:--|
+| 0 | Not allowed. |
+| 1 (Default) | Allowed. |
+<!-- AllowAdvancedGamingServices-AllowedValues-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- AllowAdvancedGamingServices-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowAdvancedGamingServices-Examples-End -->
 
-<hr/>
+<!-- AllowAdvancedGamingServices-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. Specifies whether advanced gaming services can be used. These services may send data to Microsoft or publishers of games that use these services. Value type is integer.
+<!-- Games-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- Games-CspMoreInfo-End -->
 
-<!--/Description-->
-<!--SupportedValues-->
-The following list shows the supported values:
+<!-- Games-End -->
 
-- 0 - Not Allowed
-- 1 (default) - Allowed
+## Related articles
 
-<!--/SupportedValues-->
-<!--/Policy-->
-<hr/>
-
-Footnotes:
-
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
-
-<!--/Policies-->
-
+[Policy configuration service provider](policy-configuration-service-provider.md)

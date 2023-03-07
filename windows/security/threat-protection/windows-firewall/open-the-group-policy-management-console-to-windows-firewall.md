@@ -1,27 +1,16 @@
 ---
-title: Open the Group Policy Management Console to Windows Defender Firewall (Windows 10)
-description: Open the Group Policy Management Console to Windows Defender Firewall with Advanced Security
-ms.assetid: 5090b2c8-e038-4905-b238-19ecf8227760
-ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-ms.localizationpriority: medium
-author: dansimp
-manager: dansimp
-audience: ITPro
-ms.collection: M365-security-compliance
+title: Group Policy Management of Windows Defender Firewall (Windows)
+description: Group Policy Management of Windows Defender Firewall with Advanced Security
+ms.prod: windows-client
 ms.topic: conceptual
-ms.date: 04/02/2017
+ms.date: 09/08/2021
+appliesto: 
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10 and later</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016 and later</a>
 ---
 
-# Open the Group Policy Management Console to Windows Defender Firewall
+# Group Policy Management of Windows Defender Firewall
 
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
 To open a GPO to Windows Defender Firewall:
 

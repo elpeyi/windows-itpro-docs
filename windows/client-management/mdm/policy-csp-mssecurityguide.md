@@ -1,385 +1,342 @@
 ---
-title: Policy CSP - MSSecurityGuide
-description: Policy CSP - MSSecurityGuide
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 04/16/2018
-ms.reviewer: 
-manager: dansimp
+title: MSSecurityGuide Policy CSP
+description: Learn more about the MSSecurityGuide Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 02/17/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- MSSecurityGuide-Begin -->
 # Policy CSP - MSSecurityGuide
 
-
-<hr/>
-
-<!--Policies-->
-## MSSecurityGuide policies  
-
-<dl>
-  <dd>
-    <a href="#mssecurityguide-applyuacrestrictionstolocalaccountsonnetworklogon">MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon</a>
-  </dd>
-  <dd>
-    <a href="#mssecurityguide-configuresmbv1clientdriver">MSSecurityGuide/ConfigureSMBV1ClientDriver</a>
-  </dd>
-  <dd>
-    <a href="#mssecurityguide-configuresmbv1server">MSSecurityGuide/ConfigureSMBV1Server</a>
-  </dd>
-  <dd>
-    <a href="#mssecurityguide-enablestructuredexceptionhandlingoverwriteprotection">MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection</a>
-  </dd>
-  <dd>
-    <a href="#mssecurityguide-turnonwindowsdefenderprotectionagainstpotentiallyunwantedapplications">MSSecurityGuide/TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications</a>
-  </dd>
-  <dd>
-    <a href="#mssecurityguide-wdigestauthentication">MSSecurityGuide/WDigestAuthentication</a>
-  </dd>
-</dl>
-
-
-<hr/>
-
-<!--Policy-->
-<a href="" id="mssecurityguide-applyuacrestrictionstolocalaccountsonnetworklogon"></a>**MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon**  
-
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
-
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
-
-> [!div class = "checklist"]
-> * Device
-
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
-
-<!--/Description-->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
+> This CSP contains ADMX-backed policies which require a special SyncML format to enable or disable. You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
+>
 > The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0201_LATFP*
--   GP ADMX file name: *SecGuide.admx*
+<!-- MSSecurityGuide-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- MSSecurityGuide-Editable-End -->
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Begin -->
+## ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
 
-<hr/>
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Applicability-End -->
 
-<!--Policy-->
-<a href="" id="mssecurityguide-configuresmbv1clientdriver"></a>**MSSecurityGuide/ConfigureSMBV1ClientDriver**  
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
+```
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-OmaUri-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Description-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Editable-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-DFProperties-Begin -->
+**Description framework properties**:
 
-<hr/>
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-DFProperties-End -->
 
-<!--/Scope-->
-<!--Description-->
-
-<!--/Description-->
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0002_SMBv1_ClientDriver*
--   GP ADMX file name: *SecGuide.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0201_LATFP |
+| ADMX File Name | SecGuide.admx |
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-AdmxBacked-End -->
 
-<hr/>
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-Examples-End -->
 
-<!--Policy-->
-<a href="" id="mssecurityguide-configuresmbv1server"></a>**MSSecurityGuide/ConfigureSMBV1Server**  
+<!-- ApplyUACRestrictionsToLocalAccountsOnNetworkLogon-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- ConfigureSMBV1ClientDriver-Begin -->
+## ConfigureSMBV1ClientDriver
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- ConfigureSMBV1ClientDriver-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- ConfigureSMBV1ClientDriver-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- ConfigureSMBV1ClientDriver-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1ClientDriver
+```
+<!-- ConfigureSMBV1ClientDriver-OmaUri-End -->
 
-<hr/>
+<!-- ConfigureSMBV1ClientDriver-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- ConfigureSMBV1ClientDriver-Description-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- ConfigureSMBV1ClientDriver-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureSMBV1ClientDriver-Editable-End -->
 
-<!--/Description-->
+<!-- ConfigureSMBV1ClientDriver-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ConfigureSMBV1ClientDriver-DFProperties-End -->
+
+<!-- ConfigureSMBV1ClientDriver-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0001_SMBv1_Server*
--   GP ADMX file name: *SecGuide.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0002_SMBv1_ClientDriver |
+| ADMX File Name | SecGuide.admx |
+<!-- ConfigureSMBV1ClientDriver-AdmxBacked-End -->
 
-<hr/>
+<!-- ConfigureSMBV1ClientDriver-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureSMBV1ClientDriver-Examples-End -->
 
-<!--Policy-->
-<a href="" id="mssecurityguide-enablestructuredexceptionhandlingoverwriteprotection"></a>**MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection**  
+<!-- ConfigureSMBV1ClientDriver-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- ConfigureSMBV1Server-Begin -->
+## ConfigureSMBV1Server
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- ConfigureSMBV1Server-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- ConfigureSMBV1Server-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- ConfigureSMBV1Server-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1Server
+```
+<!-- ConfigureSMBV1Server-OmaUri-End -->
 
-<hr/>
+<!-- ConfigureSMBV1Server-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- ConfigureSMBV1Server-Description-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- ConfigureSMBV1Server-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureSMBV1Server-Editable-End -->
 
-<!--/Description-->
+<!-- ConfigureSMBV1Server-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ConfigureSMBV1Server-DFProperties-End -->
+
+<!-- ConfigureSMBV1Server-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0102_SEHOP*
--   GP ADMX file name: *SecGuide.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0001_SMBv1_Server |
+| ADMX File Name | SecGuide.admx |
+<!-- ConfigureSMBV1Server-AdmxBacked-End -->
 
-<hr/>
+<!-- ConfigureSMBV1Server-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureSMBV1Server-Examples-End -->
 
-<!--Policy-->
-<a href="" id="mssecurityguide-turnonwindowsdefenderprotectionagainstpotentiallyunwantedapplications"></a>**MSSecurityGuide/TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications**  
+<!-- ConfigureSMBV1Server-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Begin -->
+## EnableStructuredExceptionHandlingOverwriteProtection
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection
+```
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-OmaUri-End -->
 
-<hr/>
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Description-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Editable-End -->
 
-<!--/Description-->
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-DFProperties-End -->
+
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0101_WDPUA*
--   GP ADMX file name: *SecGuide.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0102_SEHOP |
+| ADMX File Name | SecGuide.admx |
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-AdmxBacked-End -->
 
-<hr/>
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-Examples-End -->
 
-<!--Policy-->
-<a href="" id="mssecurityguide-wdigestauthentication"></a>**MSSecurityGuide/WDigestAuthentication**  
+<!-- EnableStructuredExceptionHandlingOverwriteProtection-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Begin -->
+## TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Applicability-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications
+```
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-OmaUri-End -->
 
-<hr/>
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Description-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Editable-End -->
 
-<!--/Description-->
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-DFProperties-End -->
+
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP name: *Pol_SecGuide_0202_WDigestAuthn*
--   GP ADMX file name: *SecGuide.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0101_WDPUA |
+| ADMX File Name | SecGuide.admx |
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-AdmxBacked-End -->
 
-Footnotes:
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-Examples-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+<!-- TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications-End -->
 
-<!--/Policies-->
+<!-- WDigestAuthentication-Begin -->
+## WDigestAuthentication
 
+<!-- WDigestAuthentication-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- WDigestAuthentication-Applicability-End -->
+
+<!-- WDigestAuthentication-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/WDigestAuthentication
+```
+<!-- WDigestAuthentication-OmaUri-End -->
+
+<!-- WDigestAuthentication-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- WDigestAuthentication-Description-End -->
+
+<!-- WDigestAuthentication-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- WDigestAuthentication-Editable-End -->
+
+<!-- WDigestAuthentication-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- WDigestAuthentication-DFProperties-End -->
+
+<!-- WDigestAuthentication-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
+> [!TIP]
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
+
+**ADMX mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | Pol_SecGuide_0202_WDigestAuthn |
+| ADMX File Name | SecGuide.admx |
+<!-- WDigestAuthentication-AdmxBacked-End -->
+
+<!-- WDigestAuthentication-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- WDigestAuthentication-Examples-End -->
+
+<!-- WDigestAuthentication-End -->
+
+<!-- MSSecurityGuide-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- MSSecurityGuide-CspMoreInfo-End -->
+
+<!-- MSSecurityGuide-End -->
+
+## Related articles
+
+[Policy configuration service provider](policy-configuration-service-provider.md)

@@ -1,341 +1,328 @@
 ---
-title: Policy CSP - Cellular
-description: Policy CSP - Cellular
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 08/08/2018
-ms.reviewer: 
-manager: dansimp
+title: Cellular Policy CSP
+description: Learn more about the Cellular Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- Cellular-Begin -->
 # Policy CSP - Cellular
 
+> [!TIP]
+> This CSP contains ADMX-backed policies which require a special SyncML format to enable or disable. You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
+>
+> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
 
+<!-- Cellular-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Cellular-Editable-End -->
 
-<hr/>
+<!-- LetAppsAccessCellularData-Begin -->
+## LetAppsAccessCellularData
 
-<!--Policies-->
-## Cellular policies  
+<!-- LetAppsAccessCellularData-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- LetAppsAccessCellularData-Applicability-End -->
 
-<dl>
-  <dd>
-    <a href="#cellular-letappsaccesscellulardata">Cellular/LetAppsAccessCellularData</a>
-  </dd>
-  <dd>
-    <a href="#cellular-letappsaccesscellulardata-forceallowtheseapps">Cellular/LetAppsAccessCellularData_ForceAllowTheseApps</a>
-  </dd>
-  <dd>
-    <a href="#cellular-letappsaccesscellulardata-forcedenytheseapps">Cellular/LetAppsAccessCellularData_ForceDenyTheseApps</a>
-  </dd>
-  <dd>
-    <a href="#cellular-letappsaccesscellulardata-userincontroloftheseapps">Cellular/LetAppsAccessCellularData_UserInControlOfTheseApps</a>
-  </dd>
-  <dd>
-    <a href="#cellular-showappcellularaccessui">Cellular/ShowAppCellularAccessUI</a>
-  </dd>
-</dl>
+<!-- LetAppsAccessCellularData-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Cellular/LetAppsAccessCellularData
+```
+<!-- LetAppsAccessCellularData-OmaUri-End -->
 
+<!-- LetAppsAccessCellularData-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting specifies whether Windows apps can access cellular data.
+<!-- LetAppsAccessCellularData-Description-End -->
 
-<hr/>
-
-<!--Policy-->
-<a href="" id="cellular-letappsaccesscellulardata"></a>**Cellular/LetAppsAccessCellularData**  
-
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
-
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
-
-> [!div class = "checklist"]
-> * Device
-
-<hr/>
-
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. This policy setting specifies whether Windows apps can access cellular data.
-
+<!-- LetAppsAccessCellularData-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 You can specify either a default setting for all apps or a per-app setting by specifying a Package Family Name. You can get the Package Family Name for an app by using the Get-AppPackage Windows PowerShell cmdlet. A per-app setting overrides the default setting.
 
 If you choose the "User is in control" option, employees in your organization can decide whether Windows apps can access cellular data by using Settings > Network - Internet > Cellular on the device.
 
-If you choose the "Force Allow" option, Windows apps are allowed to access cellular data and employees in your organization cannot change it.
+If you choose the "Force Allow" option, Windows apps are allowed to access cellular data and employees in your organization can't change it.
 
-If you choose the "Force Deny" option, Windows apps are not allowed to access cellular data and employees in your organization cannot change it.
+If you choose the "Force Deny" option, Windows apps aren't allowed to access cellular data and employees in your organization can't change it.
 
-If you disable or do not configure this policy setting, employees in your organization can decide whether Windows apps can access cellular data by using Settings > Network - Internet > Cellular on the device.
+If you disable or don't configure this policy setting, employees in your organization can decide whether Windows apps can access cellular data by using Settings > Network - Internet > Cellular on the device.
 
-If an app is open when this Group Policy object is applied on a device, employees must restart the app or device for the policy changes to be applied to the app.”
+If an app is open when this Group Policy object is applied on a device, employees must restart the app or device for the policy changes to be applied to the app.
+<!-- LetAppsAccessCellularData-Editable-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Let Windows apps access cellular data*
--   GP name: *LetAppsAccessCellularData*
--   GP element: *LetAppsAccessCellularData_Enum*
--   GP path: *Network/WWAN Service/Cellular Data Access*
--   GP ADMX file name: *wwansvc.admx*
+<!-- LetAppsAccessCellularData-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--/ADMXMapped-->
-<!--SupportedValues-->
-The following list shows the supported values:
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- LetAppsAccessCellularData-DFProperties-End -->
 
-- 0 - User is in control
-- 1 - Force Allow
-- 2 - Force Deny
+<!-- LetAppsAccessCellularData-AllowedValues-Begin -->
+**Allowed values**:
 
-<!--/SupportedValues-->
-<!--/Policy-->
+| Value | Description |
+|:--|:--|
+| 0 (Default) | User is in control. |
+| 1 | Force Allow. |
+| 2 | Force Deny. |
+<!-- LetAppsAccessCellularData-AllowedValues-End -->
 
-<hr/>
+<!-- LetAppsAccessCellularData-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--Policy-->
-<a href="" id="cellular-letappsaccesscellulardata-forceallowtheseapps"></a>**Cellular/LetAppsAccessCellularData_ForceAllowTheseApps**  
+| Name | Value |
+|:--|:--|
+| Name | LetAppsAccessCellularData |
+| Friendly Name | Let Windows apps access cellular data |
+| Element Name | Default for all apps |
+| Location | Computer Configuration |
+| Path | Network > WWAN Service > Cellular Data Access |
+| Registry Key Name | Software\Policies\Microsoft\Windows\WwanSvc\CellularDataAccess |
+| ADMX File Name | wwansvc.admx |
+<!-- LetAppsAccessCellularData-GpMapping-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- LetAppsAccessCellularData-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData-Examples-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- LetAppsAccessCellularData-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Begin -->
+## LetAppsAccessCellularData_ForceAllowTheseApps
 
-<hr/>
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Applicability-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. List of semi-colon delimited Package Family Names of Microsoft Store Apps. Listed apps are allowed access to cellular data. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps. Value type is string.
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Cellular/LetAppsAccessCellularData_ForceAllowTheseApps
+```
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-OmaUri-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Let Windows apps access cellular data*
--   GP name: *LetAppsAccessCellularData*
--   GP element: *LetAppsAccessCellularData_ForceAllowTheseApps_List*
--   GP path: *Network/WWAN Service/Cellular Data Access*
--   GP ADMX file name: *wwansvc.admx*
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Description-Begin -->
+<!-- Description-Source-DDF -->
+List of semi-colon delimited Package Family Names of Windows Store Apps. Listed apps are allowed access to cellular data. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps.
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Description-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Editable-End -->
 
-<hr/>
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--Policy-->
-<a href="" id="cellular-letappsaccesscellulardata-forcedenytheseapps"></a>**Cellular/LetAppsAccessCellularData_ForceDenyTheseApps**  
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `;`) |
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-DFProperties-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-GpMapping-Begin -->
+**Group policy mapping**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Name | Value |
+|:--|:--|
+| Name | LetAppsAccessCellularData |
+| Friendly Name | Let Windows apps access cellular data |
+| Location | Computer Configuration |
+| Path | Network > WWAN Service > Cellular Data Access |
+| Registry Key Name | Software\Policies\Microsoft\Windows\WwanSvc\CellularDataAccess |
+| ADMX File Name | wwansvc.admx |
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-GpMapping-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-Examples-End -->
 
-<hr/>
+<!-- LetAppsAccessCellularData_ForceAllowTheseApps-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. List of semi-colon delimited Package Family Names of Microsoft Store Apps. Listed apps are denied access to cellular data. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps. Value type is string.
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Begin -->
+## LetAppsAccessCellularData_ForceDenyTheseApps
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Let Windows apps access cellular data*
--   GP name: *LetAppsAccessCellularData*
--   GP element: *LetAppsAccessCellularData_ForceDenyTheseApps_List*
--   GP path: *Network/WWAN Service/Cellular Data Access*
--   GP ADMX file name: *wwansvc.admx*
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Applicability-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Cellular/LetAppsAccessCellularData_ForceDenyTheseApps
+```
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-OmaUri-End -->
 
-<hr/>
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Description-Begin -->
+<!-- Description-Source-DDF -->
+List of semi-colon delimited Package Family Names of Microsoft Store Apps. Listed apps are denied access to cellular data. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps.
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Description-End -->
 
-<!--Policy-->
-<a href="" id="cellular-letappsaccesscellulardata-userincontroloftheseapps"></a>**Cellular/LetAppsAccessCellularData_UserInControlOfTheseApps**  
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Editable-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>3</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `;`) |
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-DFProperties-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-GpMapping-Begin -->
+**Group policy mapping**:
 
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | LetAppsAccessCellularData |
+| Friendly Name | Let Windows apps access cellular data |
+| Location | Computer Configuration |
+| Path | Network > WWAN Service > Cellular Data Access |
+| Registry Key Name | Software\Policies\Microsoft\Windows\WwanSvc\CellularDataAccess |
+| ADMX File Name | wwansvc.admx |
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-GpMapping-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1709. List of semi-colon delimited Package Family Names of Windows Store Apps. The user is able to control the cellular data access setting for the listed apps. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps. Value type is string.
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-Examples-End -->
 
-<!--/Description-->
-<!--ADMXMapped-->
-ADMX Info:  
--   GP English name: *Let Windows apps access cellular data*
--   GP name: *LetAppsAccessCellularData*
--   GP element: *LetAppsAccessCellularData_UserInControlOfTheseApps_List*
--   GP path: *Network/WWAN Service/Cellular Data Access*
--   GP ADMX file name: *wwansvc.admx*
+<!-- LetAppsAccessCellularData_ForceDenyTheseApps-End -->
 
-<!--/ADMXMapped-->
-<!--/Policy-->
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Begin -->
+## LetAppsAccessCellularData_UserInControlOfTheseApps
 
-<hr/>
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Applicability-End -->
 
-<!--Policy-->
-<a href="" id="cellular-showappcellularaccessui"></a>**Cellular/ShowAppCellularAccessUI**  
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Cellular/LetAppsAccessCellularData_UserInControlOfTheseApps
+```
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-OmaUri-End -->
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Description-Begin -->
+<!-- Description-Source-DDF -->
+List of semi-colon delimited Package Family Names of Microsoft Store Apps. The user is able to control the cellular data access setting for the listed apps. This setting overrides the default LetAppsAccessCellularData policy setting for the specified apps.
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Description-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Editable-End -->
 
-> [!div class = "checklist"]
-> * Device
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-DFProperties-Begin -->
+**Description framework properties**:
 
-<hr/>
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+| Allowed Values | List (Delimiter: `;`) |
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-DFProperties-End -->
 
-<!--/Scope-->
-<!--Description-->
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | LetAppsAccessCellularData |
+| Friendly Name | Let Windows apps access cellular data |
+| Location | Computer Configuration |
+| Path | Network > WWAN Service > Cellular Data Access |
+| Registry Key Name | Software\Policies\Microsoft\Windows\WwanSvc\CellularDataAccess |
+| ADMX File Name | wwansvc.admx |
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-GpMapping-End -->
+
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-Examples-End -->
+
+<!-- LetAppsAccessCellularData_UserInControlOfTheseApps-End -->
+
+<!-- ShowAppCellularAccessUI-Begin -->
+## ShowAppCellularAccessUI
+
+<!-- ShowAppCellularAccessUI-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1709 [10.0.16299] and later |
+<!-- ShowAppCellularAccessUI-Applicability-End -->
+
+<!-- ShowAppCellularAccessUI-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Cellular/ShowAppCellularAccessUI
+```
+<!-- ShowAppCellularAccessUI-OmaUri-End -->
+
+<!-- ShowAppCellularAccessUI-Description-Begin -->
+<!-- Description-Source-ADMX -->
 This policy setting configures the visibility of the link to the per-application cellular access control page in the cellular setting UX.
 
-If this policy setting is enabled, a drop-down list box presenting possible values will be active.  Select "Hide" or "Show" to hide or show the link to the per-application cellular access control page.
-If this policy setting is disabled or is not configured, the link to the per-application cellular access control page is showed by default.
+- If this policy setting is enabled, a drop-down list box presenting possible values will be active. Select "Hide" or "Show" to hide or show the link to the per-application cellular access control page.
+- If this policy setting is disabled or is not configured, the link to the per-application cellular access control page is showed by default.
+<!-- ShowAppCellularAccessUI-Description-End -->
 
-<!--/Description-->
+<!-- ShowAppCellularAccessUI-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ShowAppCellularAccessUI-Editable-End -->
+
+<!-- ShowAppCellularAccessUI-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | chr (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ShowAppCellularAccessUI-DFProperties-End -->
+
+<!-- ShowAppCellularAccessUI-AdmxBacked-Begin -->
 > [!TIP]
-> This is an ADMX-backed policy and requires a special SyncML format to enable or disable.  For details, see [Understanding ADMX-backed policies](./understanding-admx-backed-policies.md).
-> 
-> You must specify the data type in the SyncML as &lt;Format&gt;chr&lt;/Format&gt;. For an example SyncML, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
-> 
-> The payload of the SyncML must be XML-encoded; for this XML encoding, there are a variety of online encoders that you can use. To avoid encoding the payload, you can use CDATA if your MDM supports it.  For more information, see [CDATA Sections](http://www.w3.org/TR/REC-xml/#sec-cdata-sect).
+> This is an ADMX-backed policy and requires SyncML format for configuration. For an example of SyncML format, refer to [Enabling a policy](./understanding-admx-backed-policies.md#enabling-a-policy).
 
-<!--ADMXBacked-->
-ADMX Info:  
--   GP English name: *Set Per-App Cellular Access UI Visibility*
--   GP name: *ShowAppCellularAccessUI*
--   GP path: *Network/WWAN Service/WWAN UI Settings*
--   GP ADMX file name: *wwansvc.admx*
+**ADMX mapping**:
 
-<!--/ADMXBacked-->
-<!--/Policy-->
-<hr/>
+| Name | Value |
+|:--|:--|
+| Name | ShowAppCellularAccessUI |
+| Friendly Name | Set Per-App Cellular Access UI Visibility |
+| Location | Computer Configuration |
+| Path | Network > WWAN Service > WWAN UI Settings |
+| Registry Key Name | Software\Policies\Microsoft\Windows\WwanSvc\UISettings |
+| ADMX File Name | wwansvc.admx |
+<!-- ShowAppCellularAccessUI-AdmxBacked-End -->
 
-Footnotes:
+<!-- ShowAppCellularAccessUI-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ShowAppCellularAccessUI-Examples-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+<!-- ShowAppCellularAccessUI-End -->
 
-<!--/Policies-->
+<!-- Cellular-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- Cellular-CspMoreInfo-End -->
+
+<!-- Cellular-End -->
+
+## Related articles
+
+[Policy configuration service provider](policy-configuration-service-provider.md)

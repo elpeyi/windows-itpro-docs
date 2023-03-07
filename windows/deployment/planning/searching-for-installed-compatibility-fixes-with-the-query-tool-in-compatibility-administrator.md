@@ -1,21 +1,16 @@
 ---
 title: Searching for Installed Compatibility Fixes with the Query Tool in Compatibility Administrator (Windows 10)
 description: You can access the Query tool from within Compatibility Administrator. The Query tool provides the same functionality as using the Search feature.
-ms.assetid: dd213b55-c71c-407a-ad49-33db54f82f22
-ms.reviewer: 
-manager: laurawi
-ms.author: greglin
-ms.prod: w10
-ms.mktglfcycl: plan
-ms.pagetype: appcompat
-ms.sitesec: library
-audience: itpro
-author: greg-lindsay
+manager: aaroncz
+ms.author: frankroj
+ms.prod: windows-client
+author: frankroj
 ms.topic: article
+ms.technology: itpro-deploy
+ms.date: 10/28/2022
 ---
 
 # Searching for Installed Compatibility Fixes with the Query Tool in Compatibility Administrator
-
 
 **Applies to**
 
@@ -30,13 +25,8 @@ You can access the Query tool from within Compatibility Administrator. The Query
 
 For information about the Search feature, see [Searching for Fixed Applications in Compatibility Administrator](searching-for-fixed-applications-in-compatibility-administrator.md). However, the Query tool provides more detailed search criteria, including tabs that enable you to search the program properties, the compatibility fix properties, and the fix description. You can perform a search by using SQL SELECT and WHERE clauses, in addition to searching specific types of databases.
 
-<<<<<<< HEAD
 > [!IMPORTANT]
 > You must perform your search with the correct version of the Compatibility Administrator tool. To use the Query tool to search for a 32-bit custom database, you must use the 32-bit version of Compatibility Administrator. To use the Query tool to search for a 64-bit custom database, you must use the 64-bit version of Compatibility Administrator.
-=======
->[!IMPORTANT]
->You must perform your search with the correct version of the Compatibility Administrator tool. To use the Query tool to search for a 32-bit custom database, you must use the 32-bit version of Compatibility Administrator. To use the Query tool to search for a 64-bit custom database, you must use the 64-bit version of Compatibility Administrator.
->>>>>>> bfaab3359a63dde24e6d0dca11b841e045c481f6
 
 ## Querying by Using the Program Properties Tab
 
@@ -110,10 +100,9 @@ You can use the **Fix Description** tab of the Query tool to add parameters that
 
     The query runs and the results of the query are displayed in the lower pane.
 
-## Querying by Using the Fix Description Tab
+## Querying by Using the Advanced Tab
 
-
-You can use the **Fix Description** tab of the Query tool to add additional SQL Server SELECT and WHERE clauses to your search criteria.
+You can use the **Fix Description** tab of the Query tool to add additional SQL Server SELECT and WHERE clauses to your search criteria.
 
 **To query by using the Advanced tab**
 

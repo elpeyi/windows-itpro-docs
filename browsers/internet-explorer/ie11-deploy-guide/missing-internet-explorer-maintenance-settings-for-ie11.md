@@ -2,12 +2,13 @@
 ms.localizationpriority: medium
 ms.mktglfcycl: support
 description: IEM-configured settings have been deprecated for Internet Explorer 10 and newer. Use this topic to learn where to go to fix the affected settings through Group Policy Preferences, Administrative Templates (.admx), or the IEAK.
-author: lomayor
+author: dansimp
 ms.prod: ie11
 ms.assetid: 89084e01-4e3f-46a6-b90e-48ee58d6821c
 ms.reviewer: 
-audience: itpromanager: dansimp
-ms.author: lomayor
+audience: itpro
+manager: dansimp
+ms.author: dansimp
 title: Missing Internet Explorer Maintenance settings for Internet Explorer 11 (Internet Explorer 11 for IT Pros)
 ms.sitesec: library
 ms.date: 07/27/2017
@@ -15,6 +16,9 @@ ms.date: 07/27/2017
 
 
 # Missing Internet Explorer Maintenance settings for Internet Explorer 11
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+
 
 **Applies to:**
 
@@ -40,9 +44,9 @@ For more information about all of the new options and Group Policy, see:
 
 -   [Group Policy Settings Reference for Windows and Windows Server](https://go.microsoft.com/fwlink/p/?LinkId=279876)
 
--   [Group Policy ADMX Syntax Reference Guide](https://go.microsoft.com/fwlink/p/?LinkId=276830)
+-   [Group Policy ADMX Syntax Reference Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753471(v=ws.10))
 
--   [Enable and Disable Settings in a Preference Item](https://go.microsoft.com/fwlink/p/?LinkId=282671)
+-   [Enable and Disable Settings in a Preference Item](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754299(v=ws.11))
 
 ## IEM replacements
 The IEM settings have replacements you can use in either Group Policy Preferences or IEAK 11.
@@ -95,4 +99,3 @@ The Advanced IEM settings, including Corporate and Internet settings, were also 
 |------------|------------|-----------------|
 |Corporate settings |Specifies the location of the file with the settings you use to make IE work best in your organization. |On the <b>Additional Settings</b> page of IEAK 11, expand <b>Corporate Settings</b>, and then customize how your organization handles temporary Internet files, code downloads, menu items, and toolbar buttons. |
 |Internet settings |Specifies the location of the file that includes your default IE settings. |In the <b>Internet Settings Group Policy Preferences</b> dialog box, click the <b>Advanced</b> tab, and then update your Internet-related settings, as required<p>-OR-<p>On the <b>Additional Settings</b> page of IEAK 11, expand <b>Internet Settings</b>, and then customize your default values in the <b>Internet Options</b> dialog box. |
-

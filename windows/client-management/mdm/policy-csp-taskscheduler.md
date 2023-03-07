@@ -1,83 +1,80 @@
 ---
-title: Policy CSP - TaskScheduler
-description: Policy CSP - TaskScheduler
-ms.author: dansimp
-ms.topic: article
-ms.prod: w10
-ms.technology: windows
-author: manikadhiman
-ms.date: 03/12/2018
-ms.reviewer: 
-manager: dansimp
+title: TaskScheduler Policy CSP
+description: Learn more about the TaskScheduler Area in Policy CSP.
+author: vinaypamnani-msft
+manager: aaroncz
+ms.author: vinpa
+ms.date: 01/09/2023
+ms.localizationpriority: medium
+ms.prod: windows-client
+ms.technology: itpro-manage
+ms.topic: reference
 ---
 
+<!-- Auto-Generated CSP Document -->
+
+<!-- TaskScheduler-Begin -->
 # Policy CSP - TaskScheduler
 
+<!-- TaskScheduler-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- TaskScheduler-Editable-End -->
 
-<hr/>
+<!-- EnableXboxGameSaveTask-Begin -->
+## EnableXboxGameSaveTask
 
-<!--Policies-->
-## TaskScheduler policies  
+<!-- EnableXboxGameSaveTask-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| :heavy_check_mark: Device <br> :x: User | :x: Home <br> :heavy_check_mark: Pro <br> :heavy_check_mark: Enterprise <br> :heavy_check_mark: Education <br> :heavy_check_mark: Windows SE | :heavy_check_mark: Windows 10, version 1803 [10.0.17134] and later |
+<!-- EnableXboxGameSaveTask-Applicability-End -->
 
-<dl>
-  <dd>
-    <a href="#taskscheduler-enablexboxgamesavetask">TaskScheduler/EnableXboxGameSaveTask</a>
-  </dd>
-</dl>
+<!-- EnableXboxGameSaveTask-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/TaskScheduler/EnableXboxGameSaveTask
+```
+<!-- EnableXboxGameSaveTask-OmaUri-End -->
 
+<!-- EnableXboxGameSaveTask-Description-Begin -->
+<!-- Description-Source-DDF -->
+This setting determines whether the specific task is enabled (1) or disabled (0). Default: Enabled.
+<!-- EnableXboxGameSaveTask-Description-End -->
 
-<hr/>
+<!-- EnableXboxGameSaveTask-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnableXboxGameSaveTask-Editable-End -->
 
-<!--Policy-->
-<a href="" id="taskscheduler-enablexboxgamesavetask"></a>**TaskScheduler/EnableXboxGameSaveTask**  
+<!-- EnableXboxGameSaveTask-DFProperties-Begin -->
+**Description framework properties**:
 
-<!--SupportedSKUs-->
-<table>
-<tr>
-	<th>Home</th>
-	<th>Pro</th>
-	<th>Business</th>
-	<th>Enterprise</th>
-	<th>Education</th>
-	<th>Mobile</th>
-	<th>Mobile Enterprise</th>
-</tr>
-<tr>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>4</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>4</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>4</sup></td>
-	<td><img src="images/checkmark.png" alt="check mark" /><sup>4</sup></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-	<td><img src="images/crossmark.png" alt="cross mark" /></td>
-</tr>
-</table>
+| Property name | Property value |
+|:--|:--|
+| Format | int |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- EnableXboxGameSaveTask-DFProperties-End -->
 
-<!--/SupportedSKUs-->
-<!--Scope-->
-[Scope](./policy-configuration-service-provider.md#policy-scope):
+<!-- EnableXboxGameSaveTask-AllowedValues-Begin -->
+**Allowed values**:
 
-> [!div class = "checklist"]
-> * Device
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Disabled. |
+| 1 | Enabled. |
+<!-- EnableXboxGameSaveTask-AllowedValues-End -->
 
-<hr/>
+<!-- EnableXboxGameSaveTask-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnableXboxGameSaveTask-Examples-End -->
 
-<!--/Scope-->
-<!--Description-->
-Added in Windows 10, version 1803. This setting determines whether the specific task is enabled (1) or disabled (0). Default: Disabled.
+<!-- EnableXboxGameSaveTask-End -->
 
-<!--/Description-->
-<!--/Policy-->
-<hr/>
+<!-- TaskScheduler-CspMoreInfo-Begin -->
+<!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->
+<!-- TaskScheduler-CspMoreInfo-End -->
 
-Footnotes:
+<!-- TaskScheduler-End -->
 
--   1 - Added in Windows 10, version 1607.
--   2 - Added in Windows 10, version 1703.
--   3 - Added in Windows 10, version 1709.
--   4 - Added in Windows 10, version 1803.
--   5 - Added in Windows 10, version 1809.
--   6 - Added in Windows 10, version 1903.
+## Related articles
 
-<!--/Policies-->
-
+[Policy configuration service provider](policy-configuration-service-provider.md)

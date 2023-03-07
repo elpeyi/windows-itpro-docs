@@ -2,19 +2,23 @@
 ms.localizationpriority: medium
 ms.mktglfcycl: deploy
 description: How to use the Feature Selection page in the IEAK 11 Customization Wizard to choose which parts of the setup processes and Internet Explorer 11 to change for your company.
-author: lomayor
+author: dansimp
 ms.prod: ie11
 ms.assetid: 9cb8324e-d73b-41ba-ade9-3acc796e21d8
 ms.reviewer: 
+ms.date: 03/15/2016
 audience: itpro
 manager: dansimp
-ms.author: lomayor
+ms.author: dansimp
 title: Use the Feature Selection page in the IEAK 11 Wizard (Internet Explorer Administration Kit 11 for IT Pros)
 ms.sitesec: library
 ---
 
 
 # Use the Feature Selection page in the IEAK 11 Wizard
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+
 The **Feature Selection** page of the Internet Explorer Customization Wizard 11 lets you choose which parts of the setup processes and Internet Explorer 11 to change for your company, including:
 
 -   **Setup Customizations.** Lets you add custom components, decide which components to install, provide your download site information, and modify the Setup title bar and graphics.
@@ -57,8 +61,3 @@ You can also click **Select All** to add, or **Clear All** to remove, all of the
  
 
  
-
-
-
-
-

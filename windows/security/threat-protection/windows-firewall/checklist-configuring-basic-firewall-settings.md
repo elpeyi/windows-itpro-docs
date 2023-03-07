@@ -1,27 +1,16 @@
 ---
-title: Checklist Configuring Basic Firewall Settings (Windows 10)
-description: Checklist Configuring Basic Firewall Settings
-ms.assetid: 0d10cdae-da3d-4a33-b8a4-6b6656b6d1f9
-ms.reviewer: 
-ms.author: dansimp
-ms.prod: w10
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-ms.localizationpriority: medium
-author: dansimp
-manager: dansimp
-audience: ITPro
-ms.collection: M365-security-compliance
+title: Checklist Configuring Basic Firewall Settings (Windows)
+description: Configure Windows Firewall to set inbound and outbound behavior, display notifications, record log files and more of the necessary function for Firewall.
+ms.prod: windows-client
 ms.topic: conceptual
-ms.date: 08/17/2017
+ms.date: 09/07/2021
+appliesto: 
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10 and later</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016 and later</a>
 ---
 
 # Checklist: Configuring Basic Firewall Settings
 
-**Applies to**
--   Windows 10
--   Windows Server 2016
 
 This checklist includes tasks for configuring a GPO with firewall defaults and settings that are separate from the rules.
 
